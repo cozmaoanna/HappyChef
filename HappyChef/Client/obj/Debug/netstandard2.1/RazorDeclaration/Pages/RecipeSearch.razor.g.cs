@@ -82,6 +82,35 @@ using HappyChef.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+using HappyChef.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+           [Authorize]
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/recipesearch")]
     public partial class RecipeSearch : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +118,27 @@ using HappyChef.Client.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 37 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+       
+
+    private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
+
+    private async Task RecipeSearching(ChangeEventArgs val)
+    {
+        string title = val.Value.ToString();
+
+        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=5", title);
+        searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
+
+    }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient httpClient { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHttpClientFactory _clientFactory { get; set; }
     }
 }
 #pragma warning restore 1591

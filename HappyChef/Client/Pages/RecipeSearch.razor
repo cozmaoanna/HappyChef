@@ -11,7 +11,28 @@
 
 <input placeholder="Recipe Name" @oninput="(val) => RecipeSearching(val)" />
 
+@if (searchresult != null && searchresult.hits != null)
+{
 
+    <div class="row">
+        @foreach (var item in searchresult.hits)
+        {
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-header">@item.Recipe.Label</div>
+                    <div class="card-footer">Calories : @item.Recipe.Calories</div>
+                    <div class="card-footer">Total time : @item.Recipe.TotalTime </div>
+                    <div class="card-footer"><button class="btn btn-primary">Add to favourites</button></div>
+                    <div class="card-header" href="@item.Recipe.Url">Open recipe</div>
+                    <div class="card-footer"><img src="@item.Recipe.Image"></div>
+
+                </div>
+
+            </div>
+        }
+
+    </div>
+}
 
 @code {
 

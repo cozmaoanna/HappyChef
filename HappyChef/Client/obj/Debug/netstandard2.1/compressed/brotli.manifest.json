@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\qWGf9MfRV2qJTvUcealCQG124v2oXzB3XVllPplUJHU=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Z_umta2w2I2sc58x-1_qO1JSWpIT_RsXRzPdERPfum8=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Client.dll.br"
     },
@@ -291,7 +291,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\iFV13TXa5lFXAoPIhB3DfKPbFsLitchjQlIc0AJtruw=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\OHliL_IUDssQAt5fWAatLQq4xMpyviOBezQ4qT24Qaw=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Client.pdb.br"
     },
@@ -321,7 +321,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ZC4CYj5BUlqKnDsy8SQtlv_BJj2cjnyN86KpdCElHYo=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\9VgNW_BPK7dXXS8GaiE6nhbMS8QIbqPiRhBNO31PtN0=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     }

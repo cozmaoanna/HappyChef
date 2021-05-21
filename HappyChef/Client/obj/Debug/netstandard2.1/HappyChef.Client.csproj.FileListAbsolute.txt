@@ -201,7 +201,6 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\Shared\SurveyPrompt.razor.g.cs
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\_Imports.razor.g.cs
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\blazor\unlinked.output
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\qWGf9MfRV2qJTvUcealCQG124v2oXzB3XVllPplUJHU=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\99dseBOagY3mzu5Y8Eqm8gRI_o8QbbCp7R2Ew9bQ_5E=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\ZxXy75PYbzJxNfAc-SAP1nUYm4gt1jSaOpFnBb9m85M=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\BaZPMj95_YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=.hash
@@ -259,14 +258,12 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\r8LuqDQgcB-c3E48xHqsAY1eRZB1ZtuqZF6nlufn7kg=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\DrtNiKIMjfSOdamH5Bs5zHmjFADgNiwrY5tRgTm6XuI=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\czNf3btAeBW-vvID5LAfgcsNZ_GM3ssVuPaMflcg0rs=.hash
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\iFV13TXa5lFXAoPIhB3DfKPbFsLitchjQlIc0AJtruw=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\-tZDYnLHG_0_fabMdEK28FWPNBoKTr4_mApAo3evJyI=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\3S0qzYaBEKOBXarzVLNzNAFXlwJr6nI3lFlYUpQTPH8=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\UC-3Rm1NkdNdlIrzYARo_dO-HDlS5mhPxo0IQv7kma8=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\SPHS1EAPAcMFN4TEIUYl3FWtoCQTsNJch0XVGgok1eE=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\blazor\blazor.boot.json
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\ZC4CYj5BUlqKnDsy8SQtlv_BJj2cjnyN86KpdCElHYo=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\HappyChef.Client.dll.gz
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Net.Http.Json.dll.gz
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Buffers.dll.gz
@@ -404,3 +401,8 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\HappyChef.Client.csproj.CopyComplete
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\HappyChef.Client.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\HappyChef.Client.pdb
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\RecipeSearch.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\Pages\RecipeSearch.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\Z_umta2w2I2sc58x-1_qO1JSWpIT_RsXRzPdERPfum8=.hash
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\OHliL_IUDssQAt5fWAatLQq4xMpyviOBezQ4qT24Qaw=.hash
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\9VgNW_BPK7dXXS8GaiE6nhbMS8QIbqPiRhBNO31PtN0=.hash

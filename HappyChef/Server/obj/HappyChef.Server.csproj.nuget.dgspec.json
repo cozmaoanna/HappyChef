@@ -1,0 +1,263 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Server\\HappyChef.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj",
+        "projectName": "HappyChef.Client",
+        "projectPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj",
+        "packagesPath": "C:\\Users\\CozmaO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\CozmaO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://evrosgroup.pkgs.visualstudio.com/CloudStore_DP/_packaging/CloudStoreNuget/nuget/v3/index.json": {},
+          "https://nuget.devexpress.com/bqGAyTkucRjrBudssCdKSVefctk78lwdOEUgGxMpdZjlhtmDlY/api": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj": {
+                "projectPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Build": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Server\\HappyChef.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Server\\HappyChef.Server.csproj",
+        "projectName": "HappyChef.Server",
+        "projectPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Server\\HappyChef.Server.csproj",
+        "packagesPath": "C:\\Users\\CozmaO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\CozmaO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://evrosgroup.pkgs.visualstudio.com/CloudStore_DP/_packaging/CloudStoreNuget/nuget/v3/index.json": {},
+          "https://nuget.devexpress.com/bqGAyTkucRjrBudssCdKSVefctk78lwdOEUgGxMpdZjlhtmDlY/api": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj": {
+                "projectPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj"
+              },
+              "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj": {
+                "projectPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj",
+        "projectName": "HappyChef.Shared",
+        "projectPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj",
+        "packagesPath": "C:\\Users\\CozmaO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\CozmaO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://evrosgroup.pkgs.visualstudio.com/CloudStore_DP/_packaging/CloudStoreNuget/nuget/v3/index.json": {},
+          "https://nuget.devexpress.com/bqGAyTkucRjrBudssCdKSVefctk78lwdOEUgGxMpdZjlhtmDlY/api": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

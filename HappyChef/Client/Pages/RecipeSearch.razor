@@ -1,0 +1,29 @@
+﻿@page "/recipesearch"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using HappyChef.Shared
+@attribute [Authorize]
+@inject IHttpClientFactory _clientFactory
+@inject HttpClient httpClient
+
+
+<h3>Search recipes</h3>
+
+<input placeholder="Recipe Name" @oninput="(val) => RecipeSearching(val)" />
+
+
+
+@code {
+
+    private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
+
+    private async Task RecipeSearching(ChangeEventArgs val)
+    {
+        string title = val.Value.ToString();
+
+        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=5", title);
+        searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
+
+    }
+
+}

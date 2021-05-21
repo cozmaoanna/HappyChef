@@ -1,0 +1,9 @@
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\bin\Debug\netstandard2.1\HappyChef.Shared.deps.json
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\bin\Debug\netstandard2.1\HappyChef.Shared.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\bin\Debug\netstandard2.1\HappyChef.Shared.pdb
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.csprojAssemblyReference.cache
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.AssemblyInfoInputs.cache
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.AssemblyInfo.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.csproj.CoreCompileInputs.cache
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.pdb

@@ -238,7 +238,6 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\6gJMwefpsWLHWsEipZp143xn8k2Ea27upnXqjUT6iNI=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\rvTW0d54uLW0iDMAX30lpmr9f8uHoS3YYkEU5zNGhyc=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\y-FyJQOcW2TOcTp7Iuv8brGBzL5ZP0oJdG7ysK_gtKc=.hash
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\LHFXxLDZ2kv3QIJpBHgKYmLCL8LU_5QVYhBUfsoELYY=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\4NUQ26HmvXRi8smc0jz9940OUECDLQnoMWQLrMLe0ok=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\825GQI5nG1C1WqLD1SNKSpjzLCNbH2-KChgjBL0SSXI=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\bSgsT2x5xMvs8mara5wU_EJwcyHa9GVMU85HwhWcdWM=.hash
@@ -258,7 +257,6 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\r8LuqDQgcB-c3E48xHqsAY1eRZB1ZtuqZF6nlufn7kg=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\DrtNiKIMjfSOdamH5Bs5zHmjFADgNiwrY5tRgTm6XuI=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\czNf3btAeBW-vvID5LAfgcsNZ_GM3ssVuPaMflcg0rs=.hash
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\-tZDYnLHG_0_fabMdEK28FWPNBoKTr4_mApAo3evJyI=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\3S0qzYaBEKOBXarzVLNzNAFXlwJr6nI3lFlYUpQTPH8=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\UC-3Rm1NkdNdlIrzYARo_dO-HDlS5mhPxo0IQv7kma8=.hash
@@ -403,6 +401,16 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\HappyChef.Client.pdb
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\RecipeSearch.razor.g.cs
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\Pages\RecipeSearch.razor.g.cs
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\Z_umta2w2I2sc58x-1_qO1JSWpIT_RsXRzPdERPfum8=.hash
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\OHliL_IUDssQAt5fWAatLQq4xMpyviOBezQ4qT24Qaw=.hash
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\9VgNW_BPK7dXXS8GaiE6nhbMS8QIbqPiRhBNO31PtN0=.hash
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\u-C7Rk_akN35JPZkEsmM7Q_GC9yF9iQlW5rSFJRXNwY=.hash
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\ixgTPAotnrij8yGwPvtYQLJl6o8qZz77zy44oE2A00g=.hash
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Favourites.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\Pages\Favourites.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\CRUD\Create.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\Pages\CRUD\Create.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\CRUD\Edit.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\CRUD\FavouritesForm.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\Pages\CRUD\Edit.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\Pages\CRUD\FavouritesForm.razor.g.cs
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\CE5nl0Zgkfuq3VzFNirZa_KlXOeQniQzmP_CJ1x8TLQ=.hash
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\S1rhEMnlpiIK1GR0pEqsLo2hpkkwIDsYY2WKuGxSL58=.hash
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\3pmdu3NLuf1z3F1Npt70j8I9-Ap2AaKUonHLydztobc=.hash

@@ -73,6 +73,13 @@ using HappyChef.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using HappyChef.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Shared\LoginDisplay.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 

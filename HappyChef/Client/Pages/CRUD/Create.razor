@@ -1,0 +1,36 @@
+﻿@page "/favourites/create"
+@inject HttpClient http
+@inject NavigationManager uriHelper 
+
+<h3>Create</h3>
+
+@*<FavouritesForm ButtonText="Create Favourite" favourites="@favourite" OnValidSubmit="@CreateFavourite"/>*@
+
+
+<EditForm Model="@favourite" OnValidSubmit="@CreateFavourite">
+    <div class="form-text">
+        <label>Name:</label>
+        <div>
+            <InputText @bind-Value="@favourite.FavouriteLabel"></InputText>-->
+            @*<InputText @bind-Value="@favourite.FavouriteCalories"></InputText>
+            <InputText @bind-Value="@favourite.FavouriteTotalTime"></InputText>*@
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Create Favourite
+    </button>
+
+</EditForm>
+
+
+@code {
+    FavouritesModel favourite = new FavouritesModel();
+    async Task CreateFavourite()
+    {
+        await http.PostAsJsonAsync("api/favourites", favourite);
+        uriHelper.NavigateTo("favourites");
+
+    }
+
+}

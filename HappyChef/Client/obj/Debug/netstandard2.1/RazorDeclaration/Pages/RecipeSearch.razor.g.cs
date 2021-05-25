@@ -83,6 +83,13 @@ using HappyChef.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using HappyChef.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
 using Microsoft.AspNetCore.Authorization;
 
@@ -119,7 +126,7 @@ using HappyChef.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 37 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+#line 42 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
        
 
     private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
@@ -128,10 +135,18 @@ using HappyChef.Shared;
     {
         string title = val.Value.ToString();
 
-        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=5", title);
+        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=2", title);
         searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
 
     }
+
+    FavouritesModel favourite = new FavouritesModel();
+    async Task CreateFavourite()
+    {
+        await httpClient.PostAsJsonAsync("api/favourites", favourite);
+        
+    }
+
 
 
 #line default

@@ -22,16 +22,21 @@
                     <div class="card-header">@item.Recipe.Label</div>
                     <div class="card-footer">Calories : @item.Recipe.Calories</div>
                     <div class="card-footer">Total time : @item.Recipe.TotalTime </div>
-                    <div class="card-footer"><button class="btn btn-primary">Add to favourites</button></div>
-                    <div class="card-header" href="@item.Recipe.Url">Open recipe</div>
-                    <div class="card-footer"><img src="@item.Recipe.Image"></div>
+                    @*<EditForm Model="@favourite" OnValidSubmit="@CreateFavourite">
+                        <InputText @bind-Value="favourite.FavouriteLabel" />
 
+                        <button type="submit">Add to favourites</button>
+                    </EditForm>*@
+                    <div class="card-footer"><button type="submit" class="btn btn-success" @onclick="CreateFavourite">Add to favourites</button></div>
                 </div>
 
             </div>
         }
 
     </div>
+
+
+
 }
 
 @code {
@@ -42,9 +47,17 @@
     {
         string title = val.Value.ToString();
 
-        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=5", title);
+        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=2", title);
         searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
 
     }
+
+    FavouritesModel favourite = new FavouritesModel();
+    async Task CreateFavourite()
+    {
+        await httpClient.PostAsJsonAsync("api/favourites", favourite);
+        
+    }
+
 
 }

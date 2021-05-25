@@ -1,0 +1,23 @@
+﻿
+<EditForm Model="@favourites" OnValidSubmit="@OnValidSubmit">
+    <div class="form-text">
+        <label>Name:</label>
+        <div>
+            <InputText @bind-Value="@favourites.FavouriteLabel"></InputText>
+            @*<InputText @bind-Value="@favourite.FavouriteCalories"></InputText>
+                <InputText @bind-Value="@favourite.FavouriteTotalTime"></InputText>*@
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Create Favourite
+    </button>
+
+</EditForm>
+
+
+@code {
+    [Parameter] public FavouritesModel favourites { get; set; }
+    [Parameter] public string ButtonText { get; set; } = "Save Favourite";
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+}

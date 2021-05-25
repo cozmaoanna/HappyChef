@@ -82,6 +82,13 @@ using HappyChef.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using HappyChef.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,7 +97,7 @@ using HappyChef.Client.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Shared\NavMenu.razor"
+#line 38 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

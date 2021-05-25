@@ -1,0 +1,24 @@
+﻿@*@page "/favourites/edit/{favourites.Id:int}"
+@inject HttpClient http
+@inject NavigationManager uriHelper
+
+<h3>Edit</h3>
+
+<FavouritesForm ButtonText="Edit Favourite" favourites="favourites" OnValidSubmit="@EditFavourite" />
+
+
+@code {
+    [Parameter] public int favouriteId { get; set; }
+    FavouritesModel favourites = new FavouritesModel();
+
+    protected async override Task OnParametersSetAsync()
+    {
+        favourites = await http.GetFromJsonAsync<FavouritesModel>($"api/favourites/{FavouritesModel.Id}");
+    }
+    async Task EditFavourite()
+    {
+        await http.PutAsJsonAsync("api/favourites", favourites);
+        uriHelper.NavigateTo("favourites");
+    }
+
+}*@

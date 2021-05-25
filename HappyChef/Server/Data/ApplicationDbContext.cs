@@ -1,4 +1,5 @@
 ﻿using HappyChef.Server.Models;
+using HappyChef.Shared.Models;
 using IdentityServer4.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
@@ -17,5 +18,9 @@ namespace HappyChef.Server.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+
+        public DbSet<FavouritesModel> FavouritesList { get; set; }
+
     }
+
 }

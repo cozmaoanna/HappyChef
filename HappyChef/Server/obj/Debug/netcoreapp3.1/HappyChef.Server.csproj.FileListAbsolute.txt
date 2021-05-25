@@ -269,3 +269,8 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.pdb
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.genruntimeconfig.cache
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\nunit.framework.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\WebDriver.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

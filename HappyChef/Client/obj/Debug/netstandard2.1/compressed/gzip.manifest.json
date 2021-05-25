@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\CE5nl0Zgkfuq3VzFNirZa_KlXOeQniQzmP_CJ1x8TLQ=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\sM_4dnai2CnmlX7KoLka-SZ_IsTDQR3Bfp-PgvsSyiw=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Client.dll.gz"
     },
@@ -161,6 +161,166 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.DependencyInjection.Abstractions.dll.gz"
     },
     {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\mdtMHJZRJnDUv77lLfNA0Z4-hJgVJhg7zKFj-EtW300=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Data.SqlClient.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Data.SqlClient.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\lWFI0Kzds-0QqsmuOr26m9Y29Q4rrFwkPzT6owcNWKQ=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebDriver.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebDriver.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\AmjYhRYDXrZ4UeFf6lvSeHEA5V9O1qnItDSf6TPDkyk=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Newtonsoft.Json.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Newtonsoft.Json.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ubyINHXDmWOAugBDEb8CCz_uV68eordXiYDxpUeRBvg=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.CSharp.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.CSharp.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\z8iFDTIYfU-3d7Ovx4YrLVKTe9yU9vK9m4VWuqBMIqw=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Text.Encoding.Extensions.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Text.Encoding.Extensions.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Pt0gKZW54C_3DsLw_QRTQSP_ycXbOGSm2UWYSNZZYQ0=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Reflection.Primitives.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Reflection.Primitives.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\fFIyhWRt3TsR3191q2WtKgMNr3s-jNNnO4P5rrUojjA=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Reflection.Extensions.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Reflection.Extensions.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\mzuLugvmIOgYjOk4f3eQas5TIH2wER7oBvjOd1j22ps=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Threading.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Threading.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\1FBfAreOfbXDp0WA294BCrk0EIa5ZqlghOuvDlqFtk8=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Runtime.Extensions.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Runtime.Extensions.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\wDPt-zh9xGop_Vp7dKTGGcT9bZIAatqQ-eQLhtASLgw=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Text.Encoding.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Text.Encoding.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\D2VIDaJ4RXF137pOsLTaYr0PcOtsgKNcyohlYtciLZI=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Xml.ReaderWriter.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Xml.ReaderWriter.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\YsVP1MH7elMIe4iUnDj_hJHfSvMWW8X4hzNlc2bvJ4k=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Text.RegularExpressions.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Text.RegularExpressions.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\iRJn1bctufxFpdvL9HsDYr8vyHJ43sN8tu_e9uvVEbs=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.ObjectModel.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.ObjectModel.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\KypsWhzq7xslp4YsPu9U2_wgm3YXsZR2ZUN4FgTVwZ0=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Runtime.Serialization.Formatters.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Runtime.Serialization.Formatters.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\egPOud7Mcxx-20iAZiekEmazNYxAwi8HO1Z5_a4Ikww=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Linq.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Linq.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\9wi0kDjDIr2As0DGysE9JuDt-uTnuiip7mf4UlXg_BI=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Linq.Expressions.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Linq.Expressions.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Bb8JHOjtpvbZWsd86j5fo-YwXYSlTxedlPo9_RxSlLk=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Dynamic.Runtime.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Dynamic.Runtime.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\RdBPwqgnAdTg7p1svJWuRNJXNqg0C-quM2upT5VUjCQ=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.ComponentModel.TypeConverter.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.ComponentModel.TypeConverter.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\8Q_uKcqkDjFjcXfcYU073dQlKb5IRta-UHFtV3Tjz9s=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Reflection.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Reflection.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\3o3XxHUixaHkHmaQFJjdobAN3Gi9Dv75TbqlrjclBBs=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Runtime.Serialization.Primitives.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Runtime.Serialization.Primitives.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\tFMMNru1KjM9tY0dph3potA-qlmOtgZOwHLp_imUF7Y=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Diagnostics.Debug.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Diagnostics.Debug.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\dqzLPW8oFg5YVC2_79UXgMTdvPsrnepDLYkV0Ipnmbo=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Threading.Tasks.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Threading.Tasks.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\4eZjhWp6rSxTu81oFjw5IocOeS7dQ0cijunLjlWelJA=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Globalization.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Globalization.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\zWDzFtXZzC_KLMGVRm7c4nLj3X7VnzT9SMdxCVqb3dE=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Collections.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Collections.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\rHD3sezK_6cfOkyVhvtSBCALBQVXDeV-bRvYAMuaJ4M=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Xml.XDocument.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Xml.XDocument.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\-4oTK8YMD6i_DybGa_zAJd12CkYFNAaS61OeLkwBPjA=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Xml.XmlDocument.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Xml.XmlDocument.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\B7BvGJ2-ydKv-0P7qxMYGB_Tvr6uewtxLpUhB-RCLsQ=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Runtime.Numerics.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Runtime.Numerics.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\CWadMXLl7iJZmsOz7PzKreH2b5rpyAFY8KYvg17YAv8=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.IO.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.IO.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\U4q43ZeuBEBaCygKJwr18fjDYwnFv22MHuvMVqnpNzI=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Resources.ResourceManager.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Resources.ResourceManager.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\6CpyRQAYrVPJfNYBKH0K9lWX_rNPO15lwNhGHPmvxtk=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\System.Runtime.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/System.Runtime.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\TBZaEhwkLbJE0NS4UWgaBw4HcWH_YrHu7qi5rOvgn4w=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\nunit.framework.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/nunit.framework.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\B9SuZeu1LfUMzd-wYKBYWn641cSpUPWL1tw8EZ6tXEg=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.Win32.Registry.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Win32.Registry.dll.gz"
+    },
+    {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\m7Q_cF5-ji3OMfdGlCuE8pQ-iM_kxNHLq-IEWVvIaOg=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.AspNetCore.Components.Forms.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.Forms.dll.gz"
@@ -221,7 +381,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Metadata.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\u-C7Rk_akN35JPZkEsmM7Q_GC9yF9iQlW5rSFJRXNwY=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\vgemNKNeT4tcJ-QG6femSQfnUM1Z40sOZ-qLixNCVO4=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Shared.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Shared.dll.gz"
     },
@@ -291,12 +451,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\S1rhEMnlpiIK1GR0pEqsLo2hpkkwIDsYY2WKuGxSL58=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\5nqYJYSPNY9g3SoUb2KPKdxmgDh5-cZfMj1Uz9PajO0=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Client.pdb.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ixgTPAotnrij8yGwPvtYQLJl6o8qZz77zy44oE2A00g=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\R75llJv4ecutap_2yTikPm80ue4WB0jc02GEwzjRsdA=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Shared.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Shared.pdb.gz"
     },
@@ -321,7 +481,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\3pmdu3NLuf1z3F1Npt70j8I9-Ap2AaKUonHLydztobc=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\2WZkXOIPzU2YW-NNPhADm65c4pe3Jj0kU7BJT4vBmto=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.gz"
     }

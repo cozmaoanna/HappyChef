@@ -90,6 +90,13 @@ using HappyChef.Shared.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using DevExpress.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
 using Microsoft.AspNetCore.Authorization;
 
@@ -111,6 +118,13 @@ using HappyChef.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 8 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+using HappyChef.Client.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 5 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
            [Authorize]
 
@@ -126,28 +140,41 @@ using HappyChef.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 58 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
-       
+#line 61 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+           
 
-    private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
+        private List<Recipe> recipeList;
 
-    private async Task RecipeSearching(ChangeEventArgs val)
-    {
-        string title = val.Value.ToString();
+        private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
 
-        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=2", title);
-        searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
+        private async Task RecipeSearching(ChangeEventArgs val)
+        {
+            string title = val.Value.ToString();
 
-    }
+            var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=2", title);
+            searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
+            recipeList = new List<Recipe>();
+            if (searchresult != null)
+            {
+                foreach (var item in searchresult.hits)
+                {
+                    recipeList.Add(item.Recipe);
+                }
+            }
+            this.StateHasChanged();
+        }
 
-    FavouritesModel favourite = new FavouritesModel();
-    async Task CreateFavourite()
-    {
-        await httpClient.PostAsJsonAsync("api/favourites", favourite);
-        
-    }
 
 
+        private async Task CreateFavourite(Recipe recipe)
+        {
+            FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 1 };
+            await httpClient.PostAsJsonAsync("api/favourites", favourite);
+
+        }
+
+
+    
 
 #line default
 #line hidden

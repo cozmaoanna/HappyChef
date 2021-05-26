@@ -89,6 +89,27 @@ using HappyChef.Shared.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using DevExpress.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
+           [Authorize]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/favourites")]
     public partial class Favourites : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,7 +119,7 @@ using HappyChef.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
+#line 50 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
        
     FavouritesModel[] favourites { get; set; }
 
@@ -116,8 +137,8 @@ using HappyChef.Shared.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 63 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
-            
+#line 64 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
+                
 
     }
 

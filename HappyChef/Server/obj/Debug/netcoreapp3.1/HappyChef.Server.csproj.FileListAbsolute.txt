@@ -163,6 +163,8 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\HappyChef.Server.Views.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\HappyChef.Server.Views.pdb
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\DevExpress.Blazor.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\DevExtreme.AspNet.Data.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\IdentityModel.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\IdentityServer4.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\IdentityServer4.AspNetIdentity.dll
@@ -225,8 +227,11 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.WebAssembly.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\nunit.framework.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\WebDriver.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Net.Http.Json.dll
@@ -238,6 +243,8 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
@@ -269,8 +276,6 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.pdb
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.genruntimeconfig.cache
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\nunit.framework.dll
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\WebDriver.dll
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\DevExpress.Data.v21.1.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll

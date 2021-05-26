@@ -25,7 +25,7 @@ namespace HappyChef.Client
             builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("HappyChef.ServerAPI"));
 
             builder.Services.AddApiAuthorization();
-
+            builder.Services.AddDevExpressBlazor();
             await builder.Build().RunAsync();
         }
     }

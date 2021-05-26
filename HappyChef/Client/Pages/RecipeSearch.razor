@@ -5,75 +5,92 @@
 @attribute [Authorize]
 @inject IHttpClientFactory _clientFactory
 @inject HttpClient httpClient
+@using HappyChef.Client.Models
+
 
 
 <h3>Search recipes</h3>
+
+<br />
 
 <input placeholder="Recipe Name" class="round" @oninput="(val) => RecipeSearching(val)" />
 
 <br />
 
-@if (searchresult != null && searchresult.hits != null)
-{
-
-    <div class="row">
-        @foreach (var item in searchresult.hits)
-        {
-            <div class="col-3">
-                <div class="card">
-                    <div class="card-header">@item.Recipe.Label</div>
-                    <div class="card-footer">Calories : @item.Recipe.Calories</div>
-                    @{ 
-                        var healthLabels = "";
-                        for (int i = 0; i < item.Recipe.HealthLabels.Length; i++)
-                        {
-                            healthLabels += item.Recipe.HealthLabels[i] + ",";
-                        }
-                    }
-                    <div class="card-footer">health Label : @healthLabels</div>
-                    <div class="card-footer">diet Label : @item.Recipe.DietLabels</div>
 
 
 
-                    <div class="card-footer"><img src="@item.Recipe.Image" style='height: 100%; width: 100%; object-fit: contain'></div>
+    @if (searchresult != null && searchresult.hits != null)
+    {
 
 
-                    @*<EditForm Model="@favourite" OnValidSubmit="@CreateFavourite">
-            <InputText @bind-Value="favourite.FavouriteLabel" />
 
-            <button type="submit">Add to favourites</button>
-        </EditForm>*@
-                    <div class="card-footer"><button type="submit" class="btn btn-success" @onclick="CreateFavourite">Add to favourites</button></div>
+        <div class="row">
+            @foreach (var item in searchresult.hits)
+            {
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-header">@item.Recipe.Label</div>
+                        <div class="card-footer">Calories : @item.Recipe.Calories</div>
+                        <div class="card-footer">
+                            <HappyChef.Client.Components.RecipeDetailsComponent Recipe="@item.Recipe"></HappyChef.Client.Components.RecipeDetailsComponent>
+                        </div>
+
+                        <div class="card-footer">diet Label : @item.Recipe.DietLabels</div>
+
+
+
+                        <div class="card-footer"><img src="@item.Recipe.Image" style='height: 100%; width: 100%; object-fit: contain'></div>
+
+
+                        @*<EditForm Model="@favourite" OnValidSubmit="@CreateFavourite">
+                                <InputText @bind-Value="favourite.FavouriteLabel" />
+
+                                <button type="submit">Add to favourites</button>
+                            </EditForm>*@
+                        <div class="card-footer"><button type="submit" class="btn btn-success" @onclick="@( () => CreateFavourite(item.Recipe))">Add to favourites</button></div>
+                    </div>
+
                 </div>
+            }
 
-            </div>
+        </div>
+
+
+
+    }
+
+    @code {
+
+        private List<Recipe> recipeList;
+
+        private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
+
+        private async Task RecipeSearching(ChangeEventArgs val)
+        {
+            string title = val.Value.ToString();
+
+            var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=2", title);
+            searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
+            recipeList = new List<Recipe>();
+            if (searchresult != null)
+            {
+                foreach (var item in searchresult.hits)
+                {
+                    recipeList.Add(item.Recipe);
+                }
+            }
+            this.StateHasChanged();
         }
 
-    </div>
 
 
+        private async Task CreateFavourite(Recipe recipe)
+        {
+            FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 1 };
+            await httpClient.PostAsJsonAsync("api/favourites", favourite);
 
-}
+        }
 
-@code {
-
-    private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
-
-    private async Task RecipeSearching(ChangeEventArgs val)
-    {
-        string title = val.Value.ToString();
-
-        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=2", title);
-        searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
 
     }
-
-    FavouritesModel favourite = new FavouritesModel();
-    async Task CreateFavourite()
-    {
-        await httpClient.PostAsJsonAsync("api/favourites", favourite);
-        
-    }
-
-
-}

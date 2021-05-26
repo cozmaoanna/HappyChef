@@ -1,12 +1,8 @@
 ﻿@page "/favourites"
+@attribute [Authorize]
 @inject HttpClient http
 
 <h3>Favourites</h3>
-
-<div>
-    <a class="btn btn-success" href="favourites/create">New Favourite</a>
-</div>
-
 
 @if (favourites == null)
 {
@@ -18,8 +14,8 @@ else if (favourites.Length == 0)
 }
 else
 {
-    <table class="table table-striped">
-        <thead class="thead-dark">
+    <table class="table">
+        <thead class>
             <tr>
                 <th>Actions</th>
                 <th>Recipe Name</th>
@@ -31,16 +27,16 @@ else
         <tbody>
             @foreach (var w in favourites)
             {
-            <tr>
-                <td>
-                    <a class="btn btn-success">Edit</a>
-                    <button class="btn btn-danger">Delete</button>
-                </td>
-                <td>@w.FavouriteLabel</td>
-                <td>@w.FavouriteCalories</td>
-                <td>@w.FavouriteTotalTime</td>
+                <tr>
+                    <td>
+                        <a class="btn btn-success">Edit</a>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                    <td>@w.FavouriteLabel</td>
+                    <td>@w.FavouriteCalories</td>
+                    <td>@w.FavouriteTotalTime</td>
 
-            </tr>
+                </tr>
             }
         </tbody>
     </table>
@@ -57,10 +53,7 @@ else
     async Task LoadFavourites()
     {
         favourites = await http.GetFromJsonAsync<FavouritesModel[]>("api/favourites");
-        @*favourites = new FavouritesModel[]
-        {
-            new FavouritesModel(){Id = 1, FavouriteLabel = "Finger Lickin", FavouriteCalories = 5000, FavouriteTotalTime = 200}
-        };*@
+
 
     }
 

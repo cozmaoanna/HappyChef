@@ -21,6 +21,14 @@ namespace HappyChef.Server.Controllers
         }
 
         [HttpGet]
+        [Route("[action]")]
+        public async Task<IActionResult> IAmHere()
+        {
+            return Ok("I am here");
+        }
+
+
+        [HttpGet]
         public async Task<ActionResult<List<FavouritesModel>>> Get()
         {
             return await contextfav.FavouritesList.ToListAsync();
@@ -34,11 +42,18 @@ namespace HappyChef.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post(FavouritesModel favourites)
+        public async Task<ActionResult> Post([FromBody] FavouritesModel favourite)
         {
-            contextfav.Add(favourites);
-            await contextfav.SaveChangesAsync();
-            return new CreatedAtRouteResult("GetFav", new { id = favourites.Id }, favourites);
+
+            var favItem = contextfav.FavouritesList.FirstOrDefault(x => x.UserId == favourite.UserId && x.RecipeUri == favourite.RecipeUri);
+            if(favItem == null)
+            {
+                contextfav.Add(favourite);
+                await contextfav.SaveChangesAsync();
+                return Ok(new { favourite = favourite, msg = "Added to favourites" });
+            }
+            //return new CreatedAtRouteResult("GetFav", new { id = favourites.Id }, favourites);
+            return Ok(new { favourite = favItem, msg = "Not added because already in list" });
         }
 
         [HttpPut]

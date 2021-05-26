@@ -1,0 +1,60 @@
+﻿@using HappyChef.Client.Models
+
+
+<div class="row my-2">
+    <div class="col-12">
+        <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Ingredients))"> Ingredients</button>
+        <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Labels))"> Labels</button>
+    </div>
+</div>
+
+@switch (displayState)
+{
+    case DisplayState.Ingredients:
+        <DxDataGrid Data="@Recipe.Ingredients" AllowSort="true" ShowFilterRow="true">
+            <Columns>
+                <DxDataGridColumn Field=@nameof(Ingredient.text) Caption="Ingrediant" SortOrder="DataGridColumnSortOrder.Ascending" />
+                <DxDataGridColumn Field=@nameof(Ingredient.weight) Caption="Weight" />
+                <DxDataGridColumn Field=@nameof(Ingredient.foodCategory) Caption="Food category" />
+            </Columns>
+        </DxDataGrid>
+        break;
+    case DisplayState.Labels:
+        @for (int i = 0; i < Recipe.HealthLabels.Length; i++)
+            {
+            <div class="row mt-1">
+                <div class="col-12">
+                    @Recipe.HealthLabels[i]
+                </div>
+            </div>
+            }
+        break;
+    default:
+        break;
+}
+
+
+
+@code {
+
+    [Parameter]
+    public Recipe Recipe { get; set; }
+
+    private enum DisplayState
+    {
+        Ingredients,
+        Labels
+    }
+
+    private DisplayState displayState = DisplayState.Ingredients;
+
+    private Task ChangeDisplay(DisplayState newState)
+    {
+        displayState = newState;
+        this.StateHasChanged();
+        return Task.CompletedTask;
+    }
+
+
+
+}

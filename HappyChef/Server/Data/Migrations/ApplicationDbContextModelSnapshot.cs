@@ -100,6 +100,12 @@ namespace HappyChef.Server.Data.Migrations
                     b.Property<float>("FavouriteTotalTime")
                         .HasColumnType("real");
 
+                    b.Property<string>("RecipeUri")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("FavouritesList");

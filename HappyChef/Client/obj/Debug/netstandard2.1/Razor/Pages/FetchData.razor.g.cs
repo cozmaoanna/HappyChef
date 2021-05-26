@@ -87,6 +87,13 @@ using HappyChef.Shared.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using DevExpress.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\FetchData.razor"
 using Microsoft.AspNetCore.Authorization;
 

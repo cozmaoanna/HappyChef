@@ -9,7 +9,9 @@
 
 <h3>Search recipes</h3>
 
-<input placeholder="Recipe Name" @oninput="(val) => RecipeSearching(val)" />
+<input placeholder="Recipe Name" class="round" @oninput="(val) => RecipeSearching(val)" />
+
+<br />
 
 @if (searchresult != null && searchresult.hits != null)
 {
@@ -21,12 +23,26 @@
                 <div class="card">
                     <div class="card-header">@item.Recipe.Label</div>
                     <div class="card-footer">Calories : @item.Recipe.Calories</div>
-                    <div class="card-footer">Total time : @item.Recipe.TotalTime </div>
-                    @*<EditForm Model="@favourite" OnValidSubmit="@CreateFavourite">
-                        <InputText @bind-Value="favourite.FavouriteLabel" />
+                    @{ 
+                        var healthLabels = "";
+                        for (int i = 0; i < item.Recipe.HealthLabels.Length; i++)
+                        {
+                            healthLabels += item.Recipe.HealthLabels[i] + ",";
+                        }
+                    }
+                    <div class="card-footer">health Label : @healthLabels</div>
+                    <div class="card-footer">diet Label : @item.Recipe.DietLabels</div>
 
-                        <button type="submit">Add to favourites</button>
-                    </EditForm>*@
+
+
+                    <div class="card-footer"><img src="@item.Recipe.Image" style='height: 100%; width: 100%; object-fit: contain'></div>
+
+
+                    @*<EditForm Model="@favourite" OnValidSubmit="@CreateFavourite">
+            <InputText @bind-Value="favourite.FavouriteLabel" />
+
+            <button type="submit">Add to favourites</button>
+        </EditForm>*@
                     <div class="card-footer"><button type="submit" class="btn btn-success" @onclick="CreateFavourite">Add to favourites</button></div>
                 </div>
 

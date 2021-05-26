@@ -126,7 +126,7 @@ using HappyChef.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+#line 58 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
        
 
     private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }

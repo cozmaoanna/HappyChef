@@ -49,7 +49,7 @@ app {
 
 
 
-sidebar {
+.sidebar {
     background-image: linear-gradient( 180deg, #48a2199e 0%, #064815 70%);
 }
     .sidebar .top-row {

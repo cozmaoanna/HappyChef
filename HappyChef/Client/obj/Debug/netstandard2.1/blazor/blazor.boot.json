@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "HappyChef.Client.dll": "sha256-sM+4dnai2CnmlX7KoLka\/SZ+IsTDQR3Bfp\/PgvsSyiw=",
+      "HappyChef.Client.dll": "sha256-S4OKkV18Loje8eBm1Dj+d6bPjpEvgnM3th1f3lK+P3s=",
       "System.Text.Json.dll": "sha256-HQeN+ZfHAERO+uW0fP0J9J3WV1hQ3vUIOWbqGSYBPp8=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-kL\/omZDwqByAi+lPdMeDmr3XjHcn4RVb+LmZ4mut1Yc=",
       "mscorlib.dll": "sha256-BaZPMj95+YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=",
@@ -98,7 +98,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "HappyChef.Client.pdb": "sha256-5nqYJYSPNY9g3SoUb2KPKdxmgDh5\/cZfMj1Uz9PajO0=",
+      "HappyChef.Client.pdb": "sha256-BaZVgKD+JCTS4ycuN8fDI26ZuGcIKKwLkmtVzwxoBO4=",
       "HappyChef.Shared.pdb": "sha256-R75llJv4ecutap+2yTikPm80ue4WB0jc02GEwzjRsdA="
     },
     "runtime": {

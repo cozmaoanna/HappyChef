@@ -503,7 +503,6 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\bin\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\bin\Debug\netstandard2.1\System.Threading.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\bin\Debug\netstandard2.1\System.Xml.ReaderWriter.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\bin\Debug\netstandard2.1\System.Xml.XmlDocument.dll
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\sM_4dnai2CnmlX7KoLka-SZ_IsTDQR3Bfp-PgvsSyiw=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\mdtMHJZRJnDUv77lLfNA0Z4-hJgVJhg7zKFj-EtW300=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\lWFI0Kzds-0QqsmuOr26m9Y29Q4rrFwkPzT6owcNWKQ=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\AmjYhRYDXrZ4UeFf6lvSeHEA5V9O1qnItDSf6TPDkyk=.hash
@@ -537,9 +536,7 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\TBZaEhwkLbJE0NS4UWgaBw4HcWH_YrHu7qi5rOvgn4w=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\B9SuZeu1LfUMzd-wYKBYWn641cSpUPWL1tw8EZ6tXEg=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\vgemNKNeT4tcJ-QG6femSQfnUM1Z40sOZ-qLixNCVO4=.hash
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\5nqYJYSPNY9g3SoUb2KPKdxmgDh5-cZfMj1Uz9PajO0=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\R75llJv4ecutap_2yTikPm80ue4WB0jc02GEwzjRsdA=.hash
-C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\2WZkXOIPzU2YW-NNPhADm65c4pe3Jj0kU7BJT4vBmto=.hash
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Data.SqlClient.dll.gz
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\WebDriver.dll.gz
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Newtonsoft.Json.dll.gz
@@ -604,3 +601,6 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Runtime.dll.br
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\nunit.framework.dll.br
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.Win32.Registry.dll.br
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\S4OKkV18Loje8eBm1Dj_d6bPjpEvgnM3th1f3lK_P3s=.hash
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\BaZVgKD_JCTS4ycuN8fDI26ZuGcIKKwLkmtVzwxoBO4=.hash
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\xcUWbysTeVhtVEEMytlUAklSVxXOhpEUiXmhiKzpZhI=.hash

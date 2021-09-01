@@ -1,6 +1,8 @@
 ﻿@page "/favourites"
 @attribute [Authorize]
 @inject HttpClient http
+@using HappyChef.Client.Models
+@inject IHttpClientFactory _clientFactory
 
 <h3>Favourites</h3>
 
@@ -17,7 +19,7 @@ else
     <table class="table">
         <thead class>
             <tr>
-                <th>Actions</th>
+                <th>Most favorite Recipe</th>
                 <th>Recipe Name</th>
                 <th>Calories</th>
                 <th>Prep Time</th>
@@ -27,16 +29,18 @@ else
         <tbody>
             @foreach (var w in favourites)
             {
-                <tr>
-                    <td>
-                        <a class="btn btn-success">Edit</a>
-                        <button class="btn btn-danger">Delete</button>
-                    </td>
-                    <td>@w.FavouriteLabel</td>
-                    <td>@w.FavouriteCalories</td>
-                    <td>@w.FavouriteTotalTime</td>
+            <tr>
+                <td>@w.FavouriteTotalTime</td>
 
-                </tr>
+                <td>@w.FavouriteLabel</td>
+                <td>@w.FavouriteCalories</td>
+                <td>
+
+                    <button type="submit" class="btn btn-success" >Remove</button>
+
+                </td>
+
+            </tr>
             }
         </tbody>
     </table>
@@ -56,5 +60,22 @@ else
 
 
     }
+
+
+
+
+
+    private async Task RemoveRecipe(Recipe recipe)
+    {
+        FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 1 };
+        await http.PostAsJsonAsync("api/favourites", favourite);
+
+    }
+
+
+
+
+
+
 
 }

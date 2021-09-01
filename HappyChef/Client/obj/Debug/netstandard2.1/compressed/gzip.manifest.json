@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ob6Y_k4CblZbEeVn-V8LZFbwAhJinCiSGPyAaoBay6E=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\g_HqqkKLzW6LF1OFttM1exKl_twIX3viOZnxmfsYE_M=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Client.dll.gz"
     },
@@ -261,7 +261,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Logging.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\kCoPvaFVHhXuUaCNN7K5vrf4bFVnrDu4SrvE073nMa4=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Ilcbhg0BtfsgSUwZUm80YJ8-sU_jI6PiMdtN3TjoNi8=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Shared.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Shared.dll.gz"
     },
@@ -284,6 +284,11 @@
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\5lY1KL-pA7kS-OYycrkrhkXJKFHJHVbdmUTyPYaqDiM=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.AspNetCore.Components.Authorization.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.Authorization.dll.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\OXmOCG-XoCqee_Bt1xRkO6hJIKiAIqHtW1uuJ8wRSf8=.hash",
+      "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Sotsera.Blazor.Toaster.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Sotsera.Blazor.Toaster.dll.gz"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\FJ_rEgcx6ljTxwbRXZSUGfrDKpVvOxHCSfNxbnXNn3M=.hash",
@@ -331,12 +336,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\4VdmAjfspodXVRVGBfMkxUuQ9k9lyx78ULGQ0YqkmO8=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\XcBgVgKOJRdhx9-HppWnGawmAlD4tHn9wRyQYTb7iTw=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Client.pdb.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\lmo15o77M65EorNzoEWywGi2Gq5-DDYnv5azPgh80yU=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\54u2-bCa3lE6dTTqygE98pLg0Yi85qOZmQROB0olE14=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Shared.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Shared.pdb.gz"
     },
@@ -361,7 +366,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\HarnrPtkvKLtY-aBsqaXX7eL6hiiuojtUAtuFxJu9Ng=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ewZ7N4p4pXl0IorY_Fms378Wfi3-mIG09f9gMzJYgR4=.hash",
       "Source": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.gz"
     }

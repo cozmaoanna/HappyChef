@@ -1091,6 +1091,32 @@
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
         }
       },
+      "Sotsera.Blazor.Toaster/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Sotsera.Blazor.Toaster.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Sotsera.Blazor.Toaster.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/Sotsera.Blazor.Toaster.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Sotsera.Blazor.Toaster.props": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2122,6 +2148,7 @@
           "NUnit": "3.13.2",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "90.0.4430.2400",
+          "Sotsera.Blazor.Toaster": "3.0.0",
           "System.Data.SqlClient": "4.8.2",
           "System.Net.Http.Json": "3.2.0"
         },
@@ -4074,6 +4101,26 @@
         "nupkg-icon.png",
         "selenium.webdriver.chromedriver.90.0.4430.2400.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
+      ]
+    },
+    "Sotsera.Blazor.Toaster/3.0.0": {
+      "sha512": "WXdrKlySEMsbnReVDeZypOisFTU0VHXUAb+JfPWWRWwCKW5FTdounuzIs0ArwTfEgR8W6T3DyDlC95daqyJ1ww==",
+      "type": "package",
+      "path": "sotsera.blazor.toaster/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/Sotsera.Blazor.Toaster.props",
+        "buildMultiTargeting/Sotsera.Blazor.Toaster.props",
+        "buildTransitive/Sotsera.Blazor.Toaster.props",
+        "content/Properties/launchSettings.json",
+        "contentFiles/any/netstandard2.1/Properties/launchSettings.json",
+        "lib/netstandard2.1/Sotsera.Blazor.Toaster.dll",
+        "sotsera.blazor.toaster.3.0.0.nupkg.sha512",
+        "sotsera.blazor.toaster.nuspec",
+        "staticwebassets/toastr.min.css"
       ]
     },
     "System.Collections/4.3.0": {
@@ -7592,7 +7639,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
       }
     }
   }

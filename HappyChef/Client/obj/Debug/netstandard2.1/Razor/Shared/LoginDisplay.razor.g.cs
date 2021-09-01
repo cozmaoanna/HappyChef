@@ -94,6 +94,13 @@ using Microsoft.AspNetCore.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
+#line 14 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using Sotsera.Blazor.Toaster;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Shared\LoginDisplay.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 

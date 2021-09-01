@@ -97,6 +97,13 @@ using DevExpress.Blazor;
 #line hidden
 #nullable disable
 #nullable restore
+#line 14 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using Sotsera.Blazor.Toaster;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
 using Microsoft.AspNetCore.Authorization;
 
@@ -140,45 +147,57 @@ using HappyChef.Client.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 61 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
-           
+#line 76 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+       
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+    private List<Recipe> recipeList;
+    private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
 
-        private List<Recipe> recipeList;
+    protected override async Task OnInitializedAsync()
+    {
 
-        private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
 
-        private async Task RecipeSearching(ChangeEventArgs val)
+        var user = (await authenticationStateTask).User;
+    }
+
+
+    private async Task RecipeSearching(ChangeEventArgs val)
+    {
+        string title = val.Value.ToString();
+
+        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=6", title);
+        searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
+        recipeList = new List<Recipe>();
+        if (searchresult != null)
         {
-            string title = val.Value.ToString();
-
-            var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=2", title);
-            searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
-            recipeList = new List<Recipe>();
-            if (searchresult != null)
+            foreach (var item in searchresult.hits)
             {
-                foreach (var item in searchresult.hits)
-                {
-                    recipeList.Add(item.Recipe);
-                }
+                recipeList.Add(item.Recipe);
             }
-            this.StateHasChanged();
         }
+        this.StateHasChanged();
+    }
 
 
 
-        private async Task CreateFavourite(Recipe recipe)
-        {
-            FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 1 };
-            await httpClient.PostAsJsonAsync("api/favourites", favourite);
+    private async Task CreateFavourite(Recipe recipe)
+    {
+        FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 3 };
+        await httpClient.PostAsJsonAsync("api/favourites", favourite);
+        Toaster.Success($"{recipe.Label} added to favs");
+    }
 
-        }
+    private async Task GetFavorite()
+    {
+        var recipes = await httpClient.GetStringAsync("api/favourites/GetFavoriteSummary");
+    }
 
-
-    
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Sotsera.Blazor.Toaster.IToaster Toaster { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient httpClient { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHttpClientFactory _clientFactory { get; set; }
     }

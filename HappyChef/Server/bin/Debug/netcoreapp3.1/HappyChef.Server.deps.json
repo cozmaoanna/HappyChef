@@ -1369,6 +1369,21 @@
         }
       },
       "Selenium.WebDriver.ChromeDriver/90.0.4430.2400": {},
+      "Sotsera.Blazor.Toaster/3.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.7",
+          "Microsoft.AspNetCore.Components.Web": "3.1.7"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Sotsera.Blazor.Toaster.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/Sotsera.Blazor.Toaster.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -2039,6 +2054,7 @@
           "NUnit": "3.13.2",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "90.0.4430.2400",
+          "Sotsera.Blazor.Toaster": "3.0.0",
           "System.Data.SqlClient": "4.8.2",
           "System.Net.Http.Json": "3.2.0"
         },
@@ -4144,6 +4160,13 @@
       "sha512": "sha512-poYw2JgVJ8obMYUSnfuucxQMrMusQiA3H2dXhw3bOaFm/bweTEAvhK8RVq+5zfjmTaj7COMYfIjhWJU0rPUabQ==",
       "path": "selenium.webdriver.chromedriver/90.0.4430.2400",
       "hashPath": "selenium.webdriver.chromedriver.90.0.4430.2400.nupkg.sha512"
+    },
+    "Sotsera.Blazor.Toaster/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WXdrKlySEMsbnReVDeZypOisFTU0VHXUAb+JfPWWRWwCKW5FTdounuzIs0ArwTfEgR8W6T3DyDlC95daqyJ1ww==",
+      "path": "sotsera.blazor.toaster/3.0.0",
+      "hashPath": "sotsera.blazor.toaster.3.0.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",

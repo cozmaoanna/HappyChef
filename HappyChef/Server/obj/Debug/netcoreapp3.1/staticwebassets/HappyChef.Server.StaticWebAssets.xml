@@ -4,4 +4,5 @@
   <ContentRoot BasePath="/Identity" Path="C:\Users\CozmaO\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.6\staticwebassets\V4\" />
   <ContentRoot BasePath="_content/DevExpress.Blazor" Path="C:\Users\CozmaO\.nuget\packages\devexpress.blazor\20.1.11\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication" Path="C:\Users\CozmaO\.nuget\packages\microsoft.aspnetcore.components.webassembly.authentication\3.2.1\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Sotsera.Blazor.Toaster" Path="C:\Users\CozmaO\.nuget\packages\sotsera.blazor.toaster\3.0.0\build\..\staticwebassets\" />
 </StaticWebAssets>

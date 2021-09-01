@@ -2,8 +2,12 @@
 using HappyChef.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using NUnit.Framework.Internal;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,6 +18,7 @@ namespace HappyChef.Server.Controllers
     public class FavouritesController : ControllerBase
     {
         private readonly ApplicationDbContext contextfav;
+        private object sqlParams;
 
         public FavouritesController(ApplicationDbContext context)
         {
@@ -34,6 +39,74 @@ namespace HappyChef.Server.Controllers
             return await contextfav.FavouritesList.ToListAsync();
         }
 
+
+        [HttpGet]
+        [Route("[action]")]
+        public async Task<ActionResult<List<FavouritesModel>>> GetMyFavourites(int userId)
+        {
+            return await contextfav.FavouritesList.Where(x => x.UserId == userId).ToListAsync();
+        }
+
+        [HttpGet]
+        [Route("[action]")]
+        public async Task<ActionResult<String>> GetFavoriteSummary(int userId)
+        {
+            var query = @"select FavouriteLabel, RecipeUri, COUNT(RecipeUri) as total from FavouritesList
+            group by RecipeUri, FavouriteLabel
+            order by total desc";
+            return ExecuteSql(query);
+
+            //  return await contextfav.FavouritesList.Where(x => x.UserId == userId).ToListAsync();
+        }
+
+
+
+
+        
+
+
+
+
+
+
+        private string ExecuteSql(string query)
+        {
+
+
+
+            var conn = contextfav.Database.GetDbConnection() as SqlConnection;
+            
+            using (SqlCommand command = new SqlCommand(query, conn))
+
+            {
+                if (command.Connection.State == ConnectionState.Closed)
+                {
+                    command.Connection.Open();
+                }
+                using (DataTable dt = new DataTable())
+                {
+                    using (SqlDataAdapter da = new SqlDataAdapter(command))
+                    {
+                        da.Fill(dt); List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
+                        Dictionary<string, object> row;
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            row = new Dictionary<string, object>();
+                            foreach (DataColumn col in dt.Columns)
+                            {
+                                row.Add(col.ColumnName, dr[col]);
+                            }
+                            rows.Add(row);
+                        }
+                        return JsonConvert.SerializeObject(rows);
+                    }
+                }
+            }
+        }
+
+
+
+
         [HttpGet("{id}", Name = "GetFav")]
 
         public async Task<ActionResult<FavouritesModel>> Get(int id)
@@ -46,7 +119,7 @@ namespace HappyChef.Server.Controllers
         {
 
             var favItem = contextfav.FavouritesList.FirstOrDefault(x => x.UserId == favourite.UserId && x.RecipeUri == favourite.RecipeUri);
-            if(favItem == null)
+            if (favItem == null)
             {
                 contextfav.Add(favourite);
                 await contextfav.SaveChangesAsync();

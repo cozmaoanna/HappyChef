@@ -6,6 +6,8 @@
 @inject IHttpClientFactory _clientFactory
 @inject HttpClient httpClient
 @using HappyChef.Client.Models
+@inject Sotsera.Blazor.Toaster.IToaster Toaster
+
 
 
 
@@ -20,23 +22,22 @@
 
 
 
-    @if (searchresult != null && searchresult.hits != null)
-    {
+@if (searchresult != null && searchresult.hits != null)
+{
 
 
 
-        <div class="row">
-            @foreach (var item in searchresult.hits)
-            {
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-header">@item.Recipe.Label</div>
-                        <div class="card-footer">Calories : @item.Recipe.Calories</div>
-                        <div class="card-footer">
-                            <HappyChef.Client.Components.RecipeDetailsComponent Recipe="@item.Recipe"></HappyChef.Client.Components.RecipeDetailsComponent>
-                        </div>
-
-                        <div class="card-footer">diet Label : @item.Recipe.DietLabels</div>
+    <div class="row">
+        @foreach (var item in searchresult.hits)
+        {
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">@item.Recipe.Label</div>
+                    <div class="card-footer">Calories : @item.Recipe.Calories</div>
+                    <div class="card-footer">
+                        <HappyChef.Client.Components.RecipeDetailsComponent Recipe="@item.Recipe"></HappyChef.Client.Components.RecipeDetailsComponent>
+                    </div>
+                    @*<div class="card-footer">diet Label : @item.Recipe.DietLabels</div>
 
 
 
@@ -48,49 +49,73 @@
 
                                 <button type="submit">Add to favourites</button>
                             </EditForm>*@
-                        <div class="card-footer"><button type="submit" class="btn btn-success" @onclick="@( () => CreateFavourite(item.Recipe))">Add to favourites</button></div>
-                    </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-success" @onclick="@( () => CreateFavourite(item.Recipe))">Add to favourites</button>
+                    <button type="submit" class="btn btn-success" @onclick="@( () => GetFavorite())">Get Site favorites</button>
 
                 </div>
-            }
-
-        </div>
+                    <br />
 
 
 
+
+                </div>
+                <br />
+
+            </div>
+            <br />
+
+        }
+
+    </div>
+
+
+
+}
+
+@code {
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+    private List<Recipe> recipeList;
+    private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+
+
+        var user = (await authenticationStateTask).User;
     }
 
-    @code {
 
-        private List<Recipe> recipeList;
+    private async Task RecipeSearching(ChangeEventArgs val)
+    {
+        string title = val.Value.ToString();
 
-        private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
-
-        private async Task RecipeSearching(ChangeEventArgs val)
+        var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=6", title);
+        searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
+        recipeList = new List<Recipe>();
+        if (searchresult != null)
         {
-            string title = val.Value.ToString();
-
-            var url = String.Format(@"https://api.edamam.com/search?q={0}&app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&from=0&to=2", title);
-            searchresult = await httpClient.GetFromJsonAsync<HappyChef.Client.Models.GetRecipeModel>(url);
-            recipeList = new List<Recipe>();
-            if (searchresult != null)
+            foreach (var item in searchresult.hits)
             {
-                foreach (var item in searchresult.hits)
-                {
-                    recipeList.Add(item.Recipe);
-                }
+                recipeList.Add(item.Recipe);
             }
-            this.StateHasChanged();
         }
-
-
-
-        private async Task CreateFavourite(Recipe recipe)
-        {
-            FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 1 };
-            await httpClient.PostAsJsonAsync("api/favourites", favourite);
-
-        }
-
-
+        this.StateHasChanged();
     }
+
+
+
+    private async Task CreateFavourite(Recipe recipe)
+    {
+        FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 3 };
+        await httpClient.PostAsJsonAsync("api/favourites", favourite);
+        Toaster.Success($"{recipe.Label} added to favs");
+    }
+
+    private async Task GetFavorite()
+    {
+        var recipes = await httpClient.GetStringAsync("api/favourites/GetFavoriteSummary");
+    }
+
+}

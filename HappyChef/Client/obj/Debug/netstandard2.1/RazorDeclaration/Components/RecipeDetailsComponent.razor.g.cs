@@ -104,6 +104,13 @@ using Microsoft.AspNetCore.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
+#line 14 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using Sotsera.Blazor.Toaster;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Components\RecipeDetailsComponent.razor"
 using HappyChef.Client.Models;
 
@@ -118,7 +125,7 @@ using HappyChef.Client.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Components\RecipeDetailsComponent.razor"
+#line 50 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Components\RecipeDetailsComponent.razor"
        
 
     [Parameter]
@@ -127,7 +134,8 @@ using HappyChef.Client.Models;
     private enum DisplayState
     {
         Ingredients,
-        Labels
+        Labels,
+        Diet
     }
 
     private DisplayState displayState = DisplayState.Ingredients;

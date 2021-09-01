@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "34qevUn7mCkD8aJLPD963rVWwm9jQa+Gtnb14QCADigGbQgHLdRbWXCPJvltcKupZ+wnI61Ejk1YYIKAOa5nMw==",
+  "dgSpecHash": "FaEUjhuWGhPblLsRl9GLfFOgC0xtlJOR0D4o/5jzHSnc5KubAcTuccglmKyHoeMW8X9JFX25qF3PQR8hxmLGIw==",
   "success": true,
   "projectFilePath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj",
   "expectedPackageFiles": [
@@ -51,6 +51,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\CozmaO\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
     "C:\\Users\\CozmaO\\.nuget\\packages\\selenium.webdriver.chromedriver\\90.0.4430.2400\\selenium.webdriver.chromedriver.90.0.4430.2400.nupkg.sha512",
+    "C:\\Users\\CozmaO\\.nuget\\packages\\sotsera.blazor.toaster\\3.0.0\\sotsera.blazor.toaster.3.0.0.nupkg.sha512",
     "C:\\Users\\CozmaO\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\CozmaO\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\CozmaO\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",

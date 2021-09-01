@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Sotsera.Blazor.Toaster.Core.Models;
+
 
 namespace HappyChef.Client
 {
@@ -26,7 +28,21 @@ namespace HappyChef.Client
 
             builder.Services.AddApiAuthorization();
             builder.Services.AddDevExpressBlazor();
+
+            builder.Services.AddToaster(config =>
+            {
+                //example customizations
+                config.PositionClass = Defaults.Classes.Position.TopRight;
+                config.PreventDuplicates = true;
+                config.NewestOnTop = false;
+            });
+
+
             await builder.Build().RunAsync();
+
+
+
+
         }
     }
 }

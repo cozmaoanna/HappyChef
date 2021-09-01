@@ -279,3 +279,4 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\DevExpress.Data.v21.1.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\Sotsera.Blazor.Toaster.dll

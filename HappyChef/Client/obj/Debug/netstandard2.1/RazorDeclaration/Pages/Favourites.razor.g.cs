@@ -104,6 +104,20 @@ using Microsoft.AspNetCore.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
+#line 14 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+using Sotsera.Blazor.Toaster;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
+using HappyChef.Client.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
            [Authorize]
 
@@ -119,7 +133,7 @@ using Microsoft.AspNetCore.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
+#line 49 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
        
     FavouritesModel[] favourites { get; set; }
 
@@ -131,21 +145,32 @@ using Microsoft.AspNetCore.Authorization;
     async Task LoadFavourites()
     {
         favourites = await http.GetFromJsonAsync<FavouritesModel[]>("api/favourites");
-        
 
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 64 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
-                
 
     }
 
 
+
+
+
+    private async Task RemoveRecipe(Recipe recipe)
+    {
+        FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 1 };
+        await http.PostAsJsonAsync("api/favourites", favourite);
+
+    }
+
+
+
+
+
+
+
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHttpClientFactory _clientFactory { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
     }
 }

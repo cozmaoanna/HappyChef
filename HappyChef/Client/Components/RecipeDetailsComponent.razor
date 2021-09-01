@@ -5,6 +5,8 @@
     <div class="col-12">
         <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Ingredients))"> Ingredients</button>
         <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Labels))"> Labels</button>
+        <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Diet))"> Diet Labels</button>
+
     </div>
 </div>
 
@@ -21,13 +23,23 @@
         break;
     case DisplayState.Labels:
         @for (int i = 0; i < Recipe.HealthLabels.Length; i++)
-            {
+        {
             <div class="row mt-1">
                 <div class="col-12">
                     @Recipe.HealthLabels[i]
                 </div>
             </div>
-            }
+        }
+        break;
+    case DisplayState.Diet:
+            @for(int i = 0; i < Recipe.DietLabels.Length; i++)
+                 {
+                    <div class="row mt-1">
+                    <div class="col-12">
+                      @Recipe.DietLabels[i]
+                     </div>
+                 </div>
+                }
         break;
     default:
         break;
@@ -43,7 +55,8 @@
     private enum DisplayState
     {
         Ingredients,
-        Labels
+        Labels,
+        Diet
     }
 
     private DisplayState displayState = DisplayState.Ingredients;

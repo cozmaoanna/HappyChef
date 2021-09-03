@@ -7,3 +7,13 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.csproj.CoreCompileInputs.cache
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.pdb
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\bin\Debug\netstandard2.1\HappyChef.Shared.deps.json
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\bin\Debug\netstandard2.1\HappyChef.Shared.dll
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\bin\Debug\netstandard2.1\HappyChef.Shared.pdb
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.csproj.AssemblyReference.cache
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.AssemblyInfoInputs.cache
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.AssemblyInfo.cs
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.dll
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Shared\obj\Debug\netstandard2.1\HappyChef.Shared.pdb

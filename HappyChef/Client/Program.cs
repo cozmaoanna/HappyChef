@@ -32,7 +32,7 @@ namespace HappyChef.Client
             builder.Services.AddToaster(config =>
             {
                 //example customizations
-                config.PositionClass = Defaults.Classes.Position.TopRight;
+                config.PositionClass = Defaults.Classes.Position.BottomRight;
                 config.PreventDuplicates = true;
                 config.NewestOnTop = false;
             });

@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace HappyChef.Shared.Models
+namespace HappyChef.Client.Models
 {
-    public class FavouritesModel
+    public class SiteFavouritesModel
     {
-        public int Id { get; set; }
-        public string UserId { get; set; }
         public string RecipeUri { get; set; }
         public string FavouriteLabel { get; set; }
         public float FavouriteCalories { get; set; }
         public float FavouriteTotalTime { get; set; }
-
+        public int Total { get; set; }
     }
 }

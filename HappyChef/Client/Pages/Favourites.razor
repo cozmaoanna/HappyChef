@@ -3,51 +3,62 @@
 @inject HttpClient http
 @using HappyChef.Client.Models
 @inject IHttpClientFactory _clientFactory
+@inject Sotsera.Blazor.Toaster.IToaster Toaster
 
 <h3>Favourites</h3>
 
-@if (favourites == null)
-{
-    <text> Loading</text>
-}
-else if (favourites.Length == 0)
-{
-    <text> There are no records in the database </text>
-}
-else
-{
-    <table class="table">
-        <thead class>
-            <tr>
-                <th>Most favorite Recipe</th>
-                <th>Recipe Name</th>
-                <th>Calories</th>
-                <th>Prep Time</th>
 
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var w in favourites)
+@{
+
+    switch (viewstate)
+    {
+        case ReceipeViewState.List:
+            @if (favourites == null)
             {
-            <tr>
-                <td>@w.FavouriteTotalTime</td>
-
-                <td>@w.FavouriteLabel</td>
-                <td>@w.FavouriteCalories</td>
-                <td>
-
-                    <button type="submit" class="btn btn-success" >Remove</button>
-
-                </td>
-
-            </tr>
+                <text> Loading</text>
             }
-        </tbody>
-    </table>
+            else if (favourites.Length == 0)
+            {
+                <text> You dont have any favourites yet, search for a recipe and add it as a favourite</text>
+            }
+            else
+            {
+                <DxDataGrid Data="@favourites" ShowPager="true" AllowSort="true" ShowFilterRow="true">
+                    <DxDataGridColumn Field="@nameof(FavouritesModel.FavouriteLabel)" Caption="Recipe Name" />
+                    <DxDataGridColumn Field="@nameof(FavouritesModel.FavouriteCalories)" Caption="Calories" />
+                    <DxDataGridColumn Field="@nameof(FavouritesModel.FavouriteTotalTime)" Caption="Prep Time (min)" />
+                    <DxDataGridColumn Field="@nameof(FavouritesModel.FavouriteTotalTime)" Caption="Actions">
+                        <DisplayTemplate>
+                            @{
 
+                                var favourite = context as FavouritesModel;
+                            }
+                            <button type="submit" class="btn btn-warning" @onclick="@(() => RemoveRecipe(favourite))">Remove</button>
+                            <button type="submit" class="btn btn-success" @onclick="@(() => LoadRecipe(favourite.RecipeUri))">View Recipe</button>
+                        </DisplayTemplate>
+                    </DxDataGridColumn>
+                </DxDataGrid>
+
+            }
+            break;
+        case ReceipeViewState.View:
+            <HappyChef.Client.Components.RecipeDetailsComponent Recipe="@viewrecipe">
+            </HappyChef.Client.Components.RecipeDetailsComponent>
+            break;
+        default:
+            break;
+    }
 }
 @code {
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+    System.Security.Claims.ClaimsPrincipal user { get; set; }
+
+    ReceipeViewState viewstate = ReceipeViewState.List;
+
     FavouritesModel[] favourites { get; set; }
+
+    Recipe viewrecipe { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -56,20 +67,27 @@ else
 
     async Task LoadFavourites()
     {
-        favourites = await http.GetFromJsonAsync<FavouritesModel[]>("api/favourites");
-
+        favourites = await http.GetFromJsonAsync<FavouritesModel[]>("api/favourites/GetMyFavourites");
+        this.StateHasChanged();
 
     }
 
 
-
-
-
-    private async Task RemoveRecipe(Recipe recipe)
+    private async Task RemoveRecipe(FavouritesModel favourite)
     {
-        FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 1 };
-        await http.PostAsJsonAsync("api/favourites", favourite);
+        var result = await http.DeleteAsync($"api/favourites/{favourite.Id}");
+        Toaster.Success("Favourite was deleted");
+        await LoadFavourites();
+    }
 
+    async Task LoadRecipe(string recipeUri)
+    {
+        // Get the recipe id
+        var recipeId = recipeUri.Split("_")[1];
+        var apiUri = $"https://api.edamam.com/api/recipes/v2/{recipeId}?app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&type=public";
+        viewrecipe = await http.GetFromJsonAsync<HappyChef.Client.Models.Recipe>(apiUri);
+        viewstate = ReceipeViewState.View;
+        this.StateHasChanged();
     }
 
 

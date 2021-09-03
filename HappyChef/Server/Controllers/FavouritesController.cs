@@ -1,5 +1,9 @@
 ﻿using HappyChef.Server.Data;
+using HappyChef.Server.Models;
 using HappyChef.Shared.Models;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -10,6 +14,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Claims;
 
 namespace HappyChef.Server.Controllers
 {
@@ -19,10 +24,13 @@ namespace HappyChef.Server.Controllers
     {
         private readonly ApplicationDbContext contextfav;
         private object sqlParams;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public FavouritesController(ApplicationDbContext context)
+        public FavouritesController(ApplicationDbContext context, UserManager<ApplicationUser> userManager,IHttpContextAccessor haccess)
         {
             this.contextfav = context;
+            this._userManager = userManager;
+            
         }
 
         [HttpGet]
@@ -34,77 +42,42 @@ namespace HappyChef.Server.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<List<FavouritesModel>>> Get()
-        {
-            return await contextfav.FavouritesList.ToListAsync();
-        }
-
-
-        [HttpGet]
         [Route("[action]")]
-        public async Task<ActionResult<List<FavouritesModel>>> GetMyFavourites(int userId)
+        public async Task<ActionResult<List<FavouritesModel>>> GetMyFavourites()
         {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             return await contextfav.FavouritesList.Where(x => x.UserId == userId).ToListAsync();
+            //   return await contextfav.FavouritesList.ToListAsync();
         }
+
+
+        //[HttpGet]
+        //[Route("[action]")]
+        //public async Task<ActionResult<List<FavouritesModel>>> GetMyFavourites(string userId)
+        //{
+        //    return await contextfav.FavouritesList.Where(x => x.UserId == userId).ToListAsync();
+        //}
 
         [HttpGet]
         [Route("[action]")]
-        public async Task<ActionResult<String>> GetFavoriteSummary(int userId)
+        public async Task<IActionResult> GetFavoriteSummary()
         {
-            var query = @"select FavouriteLabel, RecipeUri, COUNT(RecipeUri) as total from FavouritesList
-            group by RecipeUri, FavouriteLabel
-            order by total desc";
-            return ExecuteSql(query);
-
-            //  return await contextfav.FavouritesList.Where(x => x.UserId == userId).ToListAsync();
-        }
-
-
-
-
-        
-
-
-
-
-
-
-        private string ExecuteSql(string query)
-        {
-
-
-
-            var conn = contextfav.Database.GetDbConnection() as SqlConnection;
-            
-            using (SqlCommand command = new SqlCommand(query, conn))
-
-            {
-                if (command.Connection.State == ConnectionState.Closed)
+            var results = await contextfav.FavouritesList
+                .GroupBy(x => new { x.RecipeUri, x.FavouriteLabel , x.FavouriteCalories, x.FavouriteTotalTime })
+                .Select(group => new
                 {
-                    command.Connection.Open();
-                }
-                using (DataTable dt = new DataTable())
-                {
-                    using (SqlDataAdapter da = new SqlDataAdapter(command))
-                    {
-                        da.Fill(dt); List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
-                        Dictionary<string, object> row;
-                        foreach (DataRow dr in dt.Rows)
-                        {
-                            row = new Dictionary<string, object>();
-                            foreach (DataColumn col in dt.Columns)
-                            {
-                                row.Add(col.ColumnName, dr[col]);
-                            }
-                            rows.Add(row);
-                        }
-                        return JsonConvert.SerializeObject(rows);
-                    }
-                }
-            }
+                    RecipeUri = group.Key.RecipeUri,
+                    FavouriteLabel = group.Key.FavouriteLabel,
+                    FavouriteCalories = group.Key.FavouriteCalories,
+                    FavouriteTotalTime = group.Key.FavouriteTotalTime,
+                    Total = group.Count()
+                })
+                .OrderByDescending( x=> x.Total)
+                .Where( x=> x.Total > 1) // Only bring back a recipe if it has more than 1 like
+                .ToListAsync();
+
+            return Ok(results);
         }
-
-
 
 
         [HttpGet("{id}", Name = "GetFav")]
@@ -117,6 +90,8 @@ namespace HappyChef.Server.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] FavouritesModel favourite)
         {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            favourite.UserId = userId;
 
             var favItem = contextfav.FavouritesList.FirstOrDefault(x => x.UserId == favourite.UserId && x.RecipeUri == favourite.RecipeUri);
             if (favItem == null)
@@ -140,10 +115,14 @@ namespace HappyChef.Server.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var favourite = new FavouritesModel { Id = id };
-            contextfav.Remove(favourite);
-            await contextfav.SaveChangesAsync();
-            return NoContent();
+            var favourite = contextfav.FavouritesList.FirstOrDefault(x => x.Id == id);
+            if(favourite != null)
+            {
+                contextfav.Remove(favourite);
+                await contextfav.SaveChangesAsync();
+            }
+           
+            return Ok("Favourite was removed");
         }
 
 

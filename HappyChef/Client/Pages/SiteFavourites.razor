@@ -1,0 +1,67 @@
+﻿@page "/sitefavourites"
+@attribute [Authorize]
+@inject HttpClient http
+@using HappyChef.Client.Models
+@inject IHttpClientFactory _clientFactory
+@inject Sotsera.Blazor.Toaster.IToaster Toaster
+
+<h3>Favourites</h3>
+
+@if (sitefavourites == null)
+{
+    <text> Loading</text>
+}
+else if (sitefavourites.Length == 0)
+{
+    <text> The are currently no site favourites to display :(</text>
+}
+else
+{
+    <DxDataGrid Data="@sitefavourites" ShowPager="true" AllowSort="true" ShowFilterRow="true">
+
+        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.Total)" Caption="Popularity" />
+        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteLabel)" Caption="Recipe Name" />
+        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteCalories)" Caption="Calories" />
+        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteTotalTime)" Caption="Prep Time (min)" />
+        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteTotalTime)" Caption="Actions">
+            <DisplayTemplate>
+                @{
+
+                    var favourite = context as SiteFavouritesModel;
+                }
+                <button type="submit" class="btn btn-success" @onclick="@( () => LoadRecipe(favourite.RecipeUri))">View Recipe</button>
+            </DisplayTemplate>
+        </DxDataGridColumn>
+    </DxDataGrid>
+
+}
+@code {
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+    System.Security.Claims.ClaimsPrincipal user { get; set; }
+
+    SiteFavouritesModel[] sitefavourites { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadSiteFavourites();
+    }
+
+    async Task LoadSiteFavourites()
+    {
+        sitefavourites = await http.GetFromJsonAsync<SiteFavouritesModel[]>("api/favourites/GetFavoriteSummary");
+        this.StateHasChanged();
+
+    }
+
+    async Task LoadRecipe(string recipeUri)
+    {
+        // Get the recipe id
+        var recipeId = recipeUri.Split("_")[1];
+        var apiUri = $"https://api.edamam.com/api/recipes/v2/{recipeId}?app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&type=public";
+        var recipe = await http.GetFromJsonAsync<HappyChef.Client.Models.Recipe>(apiUri);
+    }
+
+
+}

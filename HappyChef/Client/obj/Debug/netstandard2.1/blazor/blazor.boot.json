@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "HappyChef.Client.dll": "sha256-g+HqqkKLzW6LF1OFttM1exKl+twIX3viOZnxmfsYE+M=",
+      "HappyChef.Client.dll": "sha256-pBc9WlWqGTMcJlYyP+b6HI+K6CSLWTacS7oZZAcGz\/Y=",
       "System.Text.Json.dll": "sha256-HQeN+ZfHAERO+uW0fP0J9J3WV1hQ3vUIOWbqGSYBPp8=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-kL\/omZDwqByAi+lPdMeDmr3XjHcn4RVb+LmZ4mut1Yc=",
       "mscorlib.dll": "sha256-BaZPMj95+YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=",
@@ -58,7 +58,7 @@
       "Microsoft.Win32.Registry.dll": "sha256-B9SuZeu1LfUMzd\/wYKBYWn641cSpUPWL1tw8EZ6tXEg=",
       "Microsoft.Extensions.Http.dll": "sha256-fXppSpNZWwDJhYYWU+uQSwXoC5Krwc+3mqRwKJz0FHY=",
       "Microsoft.Extensions.Logging.dll": "sha256-+kkwUt5LUrFrnFcHiSvLP3Ps50UAimB6C5utgehqOo4=",
-      "HappyChef.Shared.dll": "sha256-Ilcbhg0BtfsgSUwZUm80YJ8\/sU+jI6PiMdtN3TjoNi8=",
+      "HappyChef.Shared.dll": "sha256-otyCSz7wO5j9\/zJYwF1av86SnRXq9XBskPwDLuWW6P0=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-XR0ovsWHMInelJx0wdN2v0xH\/LJF18\/lAx9gsLcqCwA=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-5PQXYy2FLSDcNc4B9bl74TWsx7WuZ4TnRcQa9UUnzL8=",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": "sha256-AbWZIV0k4GOA+qT6O3719kiJxV5XbyEXKBWjy7wE8w4=",
@@ -75,8 +75,8 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "HappyChef.Client.pdb": "sha256-XcBgVgKOJRdhx9\/HppWnGawmAlD4tHn9wRyQYTb7iTw=",
-      "HappyChef.Shared.pdb": "sha256-54u2\/bCa3lE6dTTqygE98pLg0Yi85qOZmQROB0olE14="
+      "HappyChef.Client.pdb": "sha256-FDVrTL6ezc9j++zRd5Cs7xWqS918BhSbQLjy\/WVie8c=",
+      "HappyChef.Shared.pdb": "sha256-2jUGhSePkyHCfAB\/S3fxvt\/RLCN1PxZVBHb2PD15uaM="
     },
     "runtime": {
       "dotnet.3.2.0.js": "sha256-mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=",

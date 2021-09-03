@@ -3732,11 +3732,12 @@
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
-      "sha512": "ESJdUknrI/BExMVoQN4dQiPl+ra6m+i1UW62XwbUGJHAjHY+V3hIQpLH77+s+Ax7vkTgWrN7XwQriiCArAzOwA==",
+      "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "type": "package",
       "path": "microsoft.netcore.targets/1.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -3995,11 +3996,12 @@
       ]
     },
     "runtime.native.System/4.3.0": {
-      "sha512": "RKkZddbfAfBiBbULUL/mfGTMIQzx1MxVvDfQAe+fzTGDxC0BhGem8jDHj0YS26HG8knMTDAb4silwO7aecP9bA==",
+      "sha512": "c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
       "type": "package",
       "path": "runtime.native.system/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -4364,11 +4366,12 @@
       ]
     },
     "System.ComponentModel/4.3.0": {
-      "sha512": "C4lm3x4Tj4zBY5rK0u5+N1gtI8QIORDyV1Raa1+VP3JTMBzpa7GNX5/kFkLW7ILQXL4YYSpT2miHuAJ+W2f8Iw==",
+      "sha512": "VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
       "type": "package",
       "path": "system.componentmodel/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5084,11 +5087,12 @@
       ]
     },
     "System.Globalization.Extensions/4.3.0": {
-      "sha512": "GckyZ+Vm7HakxkOJTx6gwT6z65X7r1wY6w41nJIYvQmJt//bYyq2Uo2fyKbHQvbnXdFl4qi8SN4LVt3enbIu8Q==",
+      "sha512": "FhKmdR6MPG+pxow6wGtNAWdZh7noIOpdD5TwQ3CprzgIE1bBBoim0vbR1+AWsWjQmU7zXHgQo4TWSP6lCeiWcQ==",
       "type": "package",
       "path": "system.globalization.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5395,11 +5399,12 @@
       ]
     },
     "System.Net.NameResolution/4.3.0": {
-      "sha512": "4Wk1IwcjBXeyU+wcQDt4rDQ8Hql7psd9y+CWucoDi6w+hBNnHHPvBg0c8jn439p/QJUOyvxifCPQH3Jg0SbCtQ==",
+      "sha512": "AFYl08R7MrsrEjqpQWTZWBadqXyTzNDaWpMqyxhb0d6sGhV6xMDKueuBXlLL30gz+DIRY6MpdgnHWlCh5wmq9w==",
       "type": "package",
       "path": "system.net.nameresolution/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5611,11 +5616,12 @@
       ]
     },
     "System.Reflection.Emit/4.3.0": {
-      "sha512": "GF6VjeFNJGy2GZFIOlP6Tu3Rn2E4o42aUCRkRbG7jJ3aMO8vd7Wq4rCosTlCGTLE0eOZUZd00xytcxi22pVD/g==",
+      "sha512": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
       "type": "package",
       "path": "system.reflection.emit/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5646,11 +5652,12 @@
       ]
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
-      "sha512": "1VQrBHo0S7Sk6P3ff4JFCi+COyeC0mRwICGCp8zjIMxM04WDhuXuYu7yu5V0zLQ942n9f8CTCAKnjciArJ+Klg==",
+      "sha512": "59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
       "type": "package",
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5690,7 +5697,7 @@
       ]
     },
     "System.Reflection.Emit.Lightweight/4.3.0": {
-      "sha512": "9fwLFe2NHWfgzpBmiON8975sB2VxlMCigDJbBV5zC1cs/v39/NkqIdu2TFtHnofivTWed9Lj2A0zev6EZfu8cw==",
+      "sha512": "oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
       "type": "package",
       "path": "system.reflection.emit.lightweight/4.3.0",
       "files": [
@@ -5849,11 +5856,12 @@
       ]
     },
     "System.Reflection.TypeExtensions/4.3.0": {
-      "sha512": "2yxfjl65j2G8ufW427BDfDbZJ6xBoLy8ajhRnL2lE+QSyLo23evUMRURbO/3lIvarUdZKsT5piXIAXxubbKr/A==",
+      "sha512": "7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
       "type": "package",
       "path": "system.reflection.typeextensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7523,45 +7531,43 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CozmaO\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Cornel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Server\\HappyChef.Server.csproj",
+      "projectUniqueName": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Server\\HappyChef.Server.csproj",
       "projectName": "HappyChef.Server",
-      "projectPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Server\\HappyChef.Server.csproj",
-      "packagesPath": "C:\\Users\\CozmaO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Server\\obj\\",
+      "projectPath": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Server\\HappyChef.Server.csproj",
+      "packagesPath": "C:\\Users\\Cornel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\CozmaO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+        "C:\\Users\\Cornel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://evrosgroup.pkgs.visualstudio.com/CloudStore_DP/_packaging/CloudStoreNuget/nuget/v3/index.json": {},
-        "https://nuget.devexpress.com/bqGAyTkucRjrBudssCdKSVefctk78lwdOEUgGxMpdZjlhtmDlY/api": {}
+        "https://nuget.devexpress.com/LJunSlqoqcNvrQmNxv7Ii9Kx5iGd1472BuofDtXyIjsI4UR1h8/api": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj": {
-              "projectPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj"
+            "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj": {
+              "projectPath": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\HappyChef.Client.csproj"
             },
-            "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj": {
-              "projectPath": "C:\\Users\\CozmaO\\source\\repos\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj"
+            "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj": {
+              "projectPath": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Shared\\HappyChef.Shared.csproj"
             }
           }
         }
@@ -7639,7 +7645,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,112 +13,112 @@ namespace HappyChef.Client.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 1 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 2 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 3 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 4 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 5 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 6 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 7 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 8 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 9 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using HappyChef.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 10 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using HappyChef.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 11 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using HappyChef.Shared.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 12 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using DevExpress.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 13 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\_Imports.razor"
+#line 14 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\_Imports.razor"
 using Sotsera.Blazor.Toaster;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
+#line 4 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Pages\Favourites.razor"
 using HappyChef.Client.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
+#line 2 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Pages\Favourites.razor"
            [Authorize]
 
 #line default
@@ -133,9 +133,17 @@ using HappyChef.Client.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Client\Pages\Favourites.razor"
+#line 52 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Pages\Favourites.razor"
        
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+    System.Security.Claims.ClaimsPrincipal user { get; set; }
+
+    ReceipeViewState viewstate = ReceipeViewState.List;
+
     FavouritesModel[] favourites { get; set; }
+
+    Recipe viewrecipe { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -144,20 +152,27 @@ using HappyChef.Client.Models;
 
     async Task LoadFavourites()
     {
-        favourites = await http.GetFromJsonAsync<FavouritesModel[]>("api/favourites");
-
+        favourites = await http.GetFromJsonAsync<FavouritesModel[]>("api/favourites/GetMyFavourites");
+        this.StateHasChanged();
 
     }
 
 
-
-
-
-    private async Task RemoveRecipe(Recipe recipe)
+    private async Task RemoveRecipe(FavouritesModel favourite)
     {
-        FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 1 };
-        await http.PostAsJsonAsync("api/favourites", favourite);
+        var result = await http.DeleteAsync($"api/favourites/{favourite.Id}");
+        Toaster.Success("Favourite was deleted");
+        await LoadFavourites();
+    }
 
+    async Task LoadRecipe(string recipeUri)
+    {
+        // Get the recipe id
+        var recipeId = recipeUri.Split("_")[1];
+        var apiUri = $"https://api.edamam.com/api/recipes/v2/{recipeId}?app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&type=public";
+        viewrecipe = await http.GetFromJsonAsync<HappyChef.Client.Models.Recipe>(apiUri);
+        viewstate = ReceipeViewState.View;
+        this.StateHasChanged();
     }
 
 
@@ -170,6 +185,7 @@ using HappyChef.Client.Models;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Sotsera.Blazor.Toaster.IToaster Toaster { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHttpClientFactory _clientFactory { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
     }

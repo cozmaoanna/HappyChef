@@ -15,7 +15,7 @@
 
 <br />
 
-<input placeholder="Recipe Name" class="round" @oninput="(val) => RecipeSearching(val)" />
+<input placeholder="Recipe Name" class="round" @onchange="(val) => RecipeSearching(val)" />
 
 <br />
 
@@ -76,14 +76,15 @@
 @code {
     [CascadingParameter]
     private Task<AuthenticationState> authenticationStateTask { get; set; }
+    System.Security.Claims.ClaimsPrincipal user { get; set; }
+
     private List<Recipe> recipeList;
     private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
 
+
     protected override async Task OnInitializedAsync()
     {
-
-
-        var user = (await authenticationStateTask).User;
+        user = (await authenticationStateTask).User;
     }
 
 
@@ -108,7 +109,14 @@
 
     private async Task CreateFavourite(Recipe recipe)
     {
-        FavouritesModel favourite = new FavouritesModel() { RecipeUri = recipe.Uri, FavouriteLabel = recipe.Label, FavouriteCalories = recipe.Calories, UserId = 3 };
+
+        FavouritesModel favourite = new FavouritesModel()
+        {
+            RecipeUri = recipe.Uri,
+            FavouriteLabel = recipe.Label,
+            FavouriteCalories = recipe.Calories,
+            FavouriteTotalTime = recipe.TotalTime
+        };
         await httpClient.PostAsJsonAsync("api/favourites", favourite);
         Toaster.Success($"{recipe.Label} added to favs");
     }

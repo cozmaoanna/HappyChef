@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\pBc9WlWqGTMcJlYyP_b6HI_K6CSLWTacS7oZZAcGz-Y=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\O1ZZzpjHY8dVjjmfQQzz-vpEx8DMnuCr7DIp6KqDSC0=.hash",
       "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Client.dll.br"
     },
@@ -251,19 +251,9 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Win32.Registry.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\fXppSpNZWwDJhYYWU_uQSwXoC5Krwc_3mqRwKJz0FHY=.hash",
-      "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.Extensions.Http.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Http.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\_kkwUt5LUrFrnFcHiSvLP3Ps50UAimB6C5utgehqOo4=.hash",
-      "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.Extensions.Logging.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Logging.dll.br"
-    },
-    {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\otyCSz7wO5j9-zJYwF1av86SnRXq9XBskPwDLuWW6P0=.hash",
-      "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Shared.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Shared.dll.br"
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\AbWZIV0k4GOA_qT6O3719kiJxV5XbyEXKBWjy7wE8w4=.hash",
+      "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.br"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\XR0ovsWHMInelJx0wdN2v0xH-LJF18-lAx9gsLcqCwA=.hash",
@@ -276,14 +266,24 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Metadata.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\AbWZIV0k4GOA_qT6O3719kiJxV5XbyEXKBWjy7wE8w4=.hash",
-      "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.br"
-    },
-    {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\5lY1KL-pA7kS-OYycrkrhkXJKFHJHVbdmUTyPYaqDiM=.hash",
       "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.AspNetCore.Components.Authorization.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.AspNetCore.Components.Authorization.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\fXppSpNZWwDJhYYWU_uQSwXoC5Krwc_3mqRwKJz0FHY=.hash",
+      "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.Extensions.Http.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Http.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\_kkwUt5LUrFrnFcHiSvLP3Ps50UAimB6C5utgehqOo4=.hash",
+      "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Microsoft.Extensions.Logging.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Logging.dll.br"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\I2RJGO0iaIMoqZytEGtsZrWGHZEkTU7XUGSjt-edw4g=.hash",
+      "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Shared.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Shared.dll.br"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\OXmOCG-XoCqee_Bt1xRkO6hJIKiAIqHtW1uuJ8wRSf8=.hash",
@@ -336,12 +336,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\FDVrTL6ezc9j__zRd5Cs7xWqS918BhSbQLjy-WVie8c=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\jyl31-hjuHMkjr3qwRl_emFeMRzmugxe4-gtoO9vQcI=.hash",
       "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Client.pdb.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\2jUGhSePkyHCfAB-S3fxvt-RLCN1PxZVBHb2PD15uaM=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Ny_qMVgCB4k6sS6ypU9q4aCQ9Uf0RraJs2AMVPNe_1I=.hash",
       "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\HappyChef.Shared.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/HappyChef.Shared.pdb.br"
     },
@@ -366,7 +366,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\XNgg7ZMHQMehxXhTF4Wwg6ed4p5BVuCKhc34p59Kck8=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\6aMh_yKFrCDC0jEUez4-zCjtNHQjdNx5DPcKy9TkLBA=.hash",
       "Source": "C:\\Users\\Cornel\\Documents\\Projects\\HappyChef\\HappyChef\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     }

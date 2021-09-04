@@ -125,7 +125,7 @@ using HappyChef.Client.Models;
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/favourites")]
-    public partial class Favourites : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Favourites : FavouriteBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -133,17 +133,13 @@ using HappyChef.Client.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 52 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Pages\Favourites.razor"
+#line 55 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Pages\Favourites.razor"
        
     [CascadingParameter]
     private Task<AuthenticationState> authenticationStateTask { get; set; }
     System.Security.Claims.ClaimsPrincipal user { get; set; }
 
-    ReceipeViewState viewstate = ReceipeViewState.List;
-
     FavouritesModel[] favourites { get; set; }
-
-    Recipe viewrecipe { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -165,17 +161,14 @@ using HappyChef.Client.Models;
         await LoadFavourites();
     }
 
-    async Task LoadRecipe(string recipeUri)
+    async Task ShowRecipe(string recipeUri)
     {
-        // Get the recipe id
-        var recipeId = recipeUri.Split("_")[1];
-        var apiUri = $"https://api.edamam.com/api/recipes/v2/{recipeId}?app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&type=public";
-        viewrecipe = await http.GetFromJsonAsync<HappyChef.Client.Models.Recipe>(apiUri);
+        viewrecipe = await LoadRecipe(recipeUri);
         viewstate = ReceipeViewState.View;
         this.StateHasChanged();
     }
 
-
+   
 
 
 

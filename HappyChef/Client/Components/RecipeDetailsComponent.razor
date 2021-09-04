@@ -3,6 +3,7 @@
 
 <div class="row my-2">
     <div class="col-12">
+        <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Picture))"> Picture</button>
         <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Ingredients))"> Ingredients</button>
         <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Labels))"> Labels</button>
         <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Diet))"> Diet Labels</button>
@@ -12,17 +13,24 @@
 
 @switch (displayState)
 {
+    case DisplayState.Picture:
+        <div class="row mt-1">
+            <div class="col-12">
+               <img class="img-fluid" src="@Recipe.Image"/>
+            </div>
+        </div>
+        break;
     case DisplayState.Ingredients:
         <DxDataGrid Data="@Recipe.Ingredients" AllowSort="true" ShowFilterRow="true">
             <Columns>
-                <DxDataGridColumn Field=@nameof(Ingredient.text) Caption="Ingrediant" SortOrder="DataGridColumnSortOrder.Ascending" />
-                <DxDataGridColumn Field=@nameof(Ingredient.weight) Caption="Weight" />
-                <DxDataGridColumn Field=@nameof(Ingredient.foodCategory) Caption="Food category" />
+                <DxDataGridColumn Field=@nameof(Ingredient.Text) Caption="Ingrediant" SortOrder="DataGridColumnSortOrder.Ascending" />
+                <DxDataGridColumn Field=@nameof(Ingredient.Weight) Caption="Weight" />
+                <DxDataGridColumn Field=@nameof(Ingredient.FoodCategory) Caption="Food category" />
             </Columns>
         </DxDataGrid>
         break;
     case DisplayState.Labels:
-        @for (int i = 0; i < Recipe.HealthLabels.Length; i++)
+        @for (int i = 0; i < Recipe.HealthLabels.Count; i++)
         {
             <div class="row mt-1">
                 <div class="col-12">
@@ -32,14 +40,14 @@
         }
         break;
     case DisplayState.Diet:
-            @for(int i = 0; i < Recipe.DietLabels.Length; i++)
-                 {
-                    <div class="row mt-1">
-                    <div class="col-12">
-                      @Recipe.DietLabels[i]
-                     </div>
-                 </div>
-                }
+        @for (int i = 0; i < Recipe.DietLabels.Count; i++)
+        {
+            <div class="row mt-1">
+                <div class="col-12">
+                    @Recipe.DietLabels[i]
+                </div>
+            </div>
+        }
         break;
     default:
         break;
@@ -54,12 +62,13 @@
 
     private enum DisplayState
     {
+        Picture,
         Ingredients,
         Labels,
         Diet
     }
 
-    private DisplayState displayState = DisplayState.Ingredients;
+    private DisplayState displayState = DisplayState.Picture;
 
     private Task ChangeDisplay(DisplayState newState)
     {

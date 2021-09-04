@@ -157,6 +157,7 @@ using HappyChef.Client.Models;
     private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
 
 
+
     protected override async Task OnInitializedAsync()
     {
         user = (await authenticationStateTask).User;
@@ -172,7 +173,7 @@ using HappyChef.Client.Models;
         recipeList = new List<Recipe>();
         if (searchresult != null)
         {
-            foreach (var item in searchresult.hits)
+            foreach (var item in searchresult.Hits)
             {
                 recipeList.Add(item.Recipe);
             }

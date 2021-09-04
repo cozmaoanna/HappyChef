@@ -125,7 +125,7 @@ using HappyChef.Client.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Components\RecipeDetailsComponent.razor"
+#line 58 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Components\RecipeDetailsComponent.razor"
        
 
     [Parameter]
@@ -133,12 +133,13 @@ using HappyChef.Client.Models;
 
     private enum DisplayState
     {
+        Picture,
         Ingredients,
         Labels,
         Diet
     }
 
-    private DisplayState displayState = DisplayState.Ingredients;
+    private DisplayState displayState = DisplayState.Picture;
 
     private Task ChangeDisplay(DisplayState newState)
     {

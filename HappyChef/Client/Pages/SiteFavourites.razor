@@ -4,6 +4,7 @@
 @using HappyChef.Client.Models
 @inject IHttpClientFactory _clientFactory
 @inject Sotsera.Blazor.Toaster.IToaster Toaster
+@inherits FavouriteBase
 
 <h3>Favourites</h3>
 
@@ -17,22 +18,37 @@ else if (sitefavourites.Length == 0)
 }
 else
 {
-    <DxDataGrid Data="@sitefavourites" ShowPager="true" AllowSort="true" ShowFilterRow="true">
 
-        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.Total)" Caption="Popularity" />
-        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteLabel)" Caption="Recipe Name" />
-        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteCalories)" Caption="Calories" />
-        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteTotalTime)" Caption="Prep Time (min)" />
-        <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteTotalTime)" Caption="Actions">
-            <DisplayTemplate>
-                @{
+    switch (viewstate)
+    {
+        case ReceipeViewState.List:
+            <DxDataGrid Data="@sitefavourites" ShowPager="true" AllowSort="true" ShowFilterRow="true">
 
-                    var favourite = context as SiteFavouritesModel;
-                }
-                <button type="submit" class="btn btn-success" @onclick="@( () => LoadRecipe(favourite.RecipeUri))">View Recipe</button>
-            </DisplayTemplate>
-        </DxDataGridColumn>
-    </DxDataGrid>
+                <DxDataGridColumn Field="@nameof(SiteFavouritesModel.Total)" Caption="Popularity" />
+                <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteLabel)" Caption="Recipe Name" />
+                <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteCalories)" Caption="Calories" />
+                <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteTotalTime)" Caption="Prep Time (min)" />
+                <DxDataGridColumn Field="@nameof(SiteFavouritesModel.FavouriteTotalTime)" Caption="Actions">
+                    <DisplayTemplate>
+                        @{
+
+                            var favourite = context as SiteFavouritesModel;
+                        }
+                        <button type="submit" class="btn btn-success" @onclick="@( () => ShowRecipe(favourite.RecipeUri))">View Recipe</button>
+                    </DisplayTemplate>
+                </DxDataGridColumn>
+            </DxDataGrid>
+            break;
+        case ReceipeViewState.View:
+            <button class="btn btn-sm btn-primary mb-3" @onclick="@BackToFavourites"> Back</button>
+            <HappyChef.Client.Components.RecipeDetailsComponent Recipe="@viewrecipe">
+            </HappyChef.Client.Components.RecipeDetailsComponent>
+            break;
+        default:
+            break;
+    }
+
+
 
 }
 @code {
@@ -55,13 +71,12 @@ else
 
     }
 
-    async Task LoadRecipe(string recipeUri)
+    async Task ShowRecipe(string recipeUri)
     {
-        // Get the recipe id
-        var recipeId = recipeUri.Split("_")[1];
-        var apiUri = $"https://api.edamam.com/api/recipes/v2/{recipeId}?app_id=b7d7673f&app_key=165ba23ed5126d12ecfe3cd57091d539&type=public";
-        var recipe = await http.GetFromJsonAsync<HappyChef.Client.Models.Recipe>(apiUri);
+        viewrecipe = await LoadRecipe(recipeUri);
+        viewstate = ReceipeViewState.View;
+        this.StateHasChanged();
     }
-
+    
 
 }

@@ -280,8 +280,7 @@ C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\CozmaO\source\repos\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\Sotsera.Blazor.Toaster.dll
-C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.dll
-C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.pdb
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\HappyChef.Client.StaticWebAssets.xml
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\BlazorDebugProxy\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
@@ -436,7 +435,6 @@ C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcorea
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\BlazorDebugProxy\zh-Hans\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\BlazorDebugProxy\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\BlazorDebugProxy\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\HappyChef.Client.StaticWebAssets.xml
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\HappyChef.Server.StaticWebAssets.xml
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\HappyChef.Server.exe
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\bin\Debug\netcoreapp3.1\HappyChef.Server.deps.json
@@ -562,4 +560,6 @@ C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\obj\Debug\netcorea
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.RazorTargetAssemblyInfo.cs
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.Views.pdb
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.csproj.CopyComplete
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.dll
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.pdb
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Server\obj\Debug\netcoreapp3.1\HappyChef.Server.genruntimeconfig.cache

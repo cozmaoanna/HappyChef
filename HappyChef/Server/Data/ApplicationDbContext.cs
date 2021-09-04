@@ -20,6 +20,7 @@ namespace HappyChef.Server.Data
         }
 
         public DbSet<FavouritesModel> FavouritesList { get; set; }
+        public DbSet<ReviewModel> ReviewList { get; set; }
 
     }
 

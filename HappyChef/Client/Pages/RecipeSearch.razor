@@ -22,13 +22,13 @@
 
 
 
-@if (searchresult != null && searchresult.hits != null)
+@if (searchresult != null && searchresult.Hits != null)
 {
 
-
+    
 
     <div class="row">
-        @foreach (var item in searchresult.hits)
+        @foreach (var item in searchresult.Hits)
         {
             <div class="col-6">
                 <div class="card">
@@ -49,11 +49,11 @@
 
                                 <button type="submit">Add to favourites</button>
                             </EditForm>*@
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-success" @onclick="@( () => CreateFavourite(item.Recipe))">Add to favourites</button>
-                    <button type="submit" class="btn btn-success" @onclick="@( () => GetFavorite())">Get Site favorites</button>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success" @onclick="@( () => CreateFavourite(item.Recipe))">Add to favourites</button>
+                        <button type="submit" class="btn btn-success" @onclick="@( () => GetFavorite())">Get Site favorites</button>
 
-                </div>
+                    </div>
                     <br />
 
 
@@ -82,6 +82,7 @@
     private HappyChef.Client.Models.GetRecipeModel searchresult { get; set; }
 
 
+
     protected override async Task OnInitializedAsync()
     {
         user = (await authenticationStateTask).User;
@@ -97,7 +98,7 @@
         recipeList = new List<Recipe>();
         if (searchresult != null)
         {
-            foreach (var item in searchresult.hits)
+            foreach (var item in searchresult.Hits)
             {
                 recipeList.Add(item.Recipe);
             }

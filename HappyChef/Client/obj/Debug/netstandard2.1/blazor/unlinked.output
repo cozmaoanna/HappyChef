@@ -48,13 +48,13 @@ obj\Debug\netstandard2.1\blazor\unlinked\System.Data.SqlClient.dll
 obj\Debug\netstandard2.1\blazor\unlinked\WebDriver.dll
 obj\Debug\netstandard2.1\blazor\unlinked\nunit.framework.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Win32.Registry.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Authorization.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Metadata.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.Authorization.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Http.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Logging.dll
 obj\Debug\netstandard2.1\blazor\unlinked\HappyChef.Shared.dll
-obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Authorization.dll
-obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Metadata.dll
-obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
-obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.Authorization.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Sotsera.Blazor.Toaster.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.WebAssembly.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Configuration.dll

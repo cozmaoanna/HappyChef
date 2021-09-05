@@ -26,7 +26,7 @@ namespace HappyChef.Server.Controllers
         private object sqlParams;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public ReviewsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager,IHttpContextAccessor haccess)
+        public ReviewsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, IHttpContextAccessor haccess)
         {
             this.contextreview = context;
             this._userManager = userManager;
@@ -40,16 +40,31 @@ namespace HappyChef.Server.Controllers
         }
 
 
-        [HttpGet]
+        [HttpPost]
         [Route("[action]")]
-        public async Task<ActionResult<List<FavouritesModel>>> GetRecipeReviews(string recipeUri)
+        public async Task<ActionResult<List<ReviewModel>>> GetRecipeReviews([FromBody] ReviewUrl reviewUrl)
         {
-            return default;
+            var reviews = contextreview.ReviewList.Where(x => x.RecipeUri == reviewUrl.RecipeUri)
+                .OrderByDescending(x => x.DateStamp);
+
+            return Ok(reviews);
             //return await contextreview.FavouritesList.Where(x => x.UserId == userId).ToListAsync();
             //   return await contextfav.FavouritesList.ToListAsync();
         }
 
+        [HttpPost]
+        public async Task<ActionResult> Post([FromBody] ReviewModel review)
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            review.UserId = userId;
+            contextreview.Add(review);
+            await contextreview.SaveChangesAsync();
+            return Ok(new { review = review, msg = "Added to reviews" });
+        }
+
     }
 
-
 }
+
+
+

@@ -1,57 +1,77 @@
 ﻿@using HappyChef.Client.Models
+@inject HttpClient httpClient
+@inject Sotsera.Blazor.Toaster.IToaster Toaster
 
 
-<div class="row my-2">
-    <div class="col-12">
-        <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Picture))"> Picture</button>
-        <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Ingredients))"> Ingredients</button>
-        <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Labels))"> Labels</button>
-        <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Diet))"> Diet Labels</button>
+<div class="col-6">
+    <div class="card">
+        <div class="card-header">@Recipe.Label</div>
+        <div class="card-footer">Calories : @Recipe.Calories</div>
+        <div class="card-footer">
 
+            <div class="row my-2">
+                <div class="col-12">
+                    <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Picture))"> Picture</button>
+                    <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Ingredients))"> Ingredients</button>
+                    <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Labels))"> Labels</button>
+                    <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Diet))"> Diet Labels</button>
+                    <button class="btn btn-sm btn-primary" @onclick="@(() => ChangeDisplay(DisplayState.Reviews))"> Reviews</button>
+                </div>
+            </div>
+
+            @switch (displayState)
+            {
+                case DisplayState.Picture:
+                    <div class="row mt-1">
+                        <div class="col-12">
+                            <img class="img-fluid" src="@Recipe.Image" />
+                        </div>
+                    </div>
+                    break;
+                case DisplayState.Ingredients:
+                    <DxDataGrid Data="@Recipe.Ingredients" AllowSort="true" ShowFilterRow="true">
+                        <Columns>
+                            <DxDataGridColumn Field=@nameof(Ingredient.Text) Caption="Ingrediant" SortOrder="DataGridColumnSortOrder.Ascending" />
+                            <DxDataGridColumn Field=@nameof(Ingredient.Weight) Caption="Weight" />
+                            <DxDataGridColumn Field=@nameof(Ingredient.FoodCategory) Caption="Food category" />
+                        </Columns>
+                    </DxDataGrid>
+                    break;
+                case DisplayState.Labels:
+                    @for (int i = 0; i < Recipe.HealthLabels.Count; i++)
+                    {
+                        <div class="row mt-1">
+                            <div class="col-12">
+                                @Recipe.HealthLabels[i]
+                            </div>
+                        </div>
+                    }
+                    break;
+                case DisplayState.Diet:
+                    @for (int i = 0; i < Recipe.DietLabels.Count; i++)
+                    {
+                        <div class="row mt-1">
+                            <div class="col-12">
+                                @Recipe.DietLabels[i]
+                            </div>
+                        </div>
+                    }
+                    break;
+                case DisplayState.Reviews:
+                    <ReviewDisplayComponent Recipe="@Recipe" OnCreateReview="@(() => ChangeDisplay(DisplayState.CreateReview))"/>
+                    break;
+                case DisplayState.CreateReview:
+                    <CreateReviewComponent Recipe="@Recipe" OnBack="@(() => ChangeDisplay(DisplayState.Reviews))"/>
+                    break;
+                default:
+                    break;
+            }
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success" @onclick="@( () => CreateFavourite(Recipe))">Add to favourites</button>
+        </div>
     </div>
 </div>
-
-@switch (displayState)
-{
-    case DisplayState.Picture:
-        <div class="row mt-1">
-            <div class="col-12">
-               <img class="img-fluid" src="@Recipe.Image"/>
-            </div>
-        </div>
-        break;
-    case DisplayState.Ingredients:
-        <DxDataGrid Data="@Recipe.Ingredients" AllowSort="true" ShowFilterRow="true">
-            <Columns>
-                <DxDataGridColumn Field=@nameof(Ingredient.Text) Caption="Ingrediant" SortOrder="DataGridColumnSortOrder.Ascending" />
-                <DxDataGridColumn Field=@nameof(Ingredient.Weight) Caption="Weight" />
-                <DxDataGridColumn Field=@nameof(Ingredient.FoodCategory) Caption="Food category" />
-            </Columns>
-        </DxDataGrid>
-        break;
-    case DisplayState.Labels:
-        @for (int i = 0; i < Recipe.HealthLabels.Count; i++)
-        {
-            <div class="row mt-1">
-                <div class="col-12">
-                    @Recipe.HealthLabels[i]
-                </div>
-            </div>
-        }
-        break;
-    case DisplayState.Diet:
-        @for (int i = 0; i < Recipe.DietLabels.Count; i++)
-        {
-            <div class="row mt-1">
-                <div class="col-12">
-                    @Recipe.DietLabels[i]
-                </div>
-            </div>
-        }
-        break;
-    default:
-        break;
-}
 
 
 
@@ -65,7 +85,9 @@
         Picture,
         Ingredients,
         Labels,
-        Diet
+        Diet,
+        Reviews,
+        CreateReview
     }
 
     private DisplayState displayState = DisplayState.Picture;
@@ -77,6 +99,23 @@
         return Task.CompletedTask;
     }
 
+    private async Task CreateFavourite(Recipe recipe)
+    {
 
+        FavouritesModel favourite = new FavouritesModel()
+        {
+            RecipeUri = recipe.Uri,
+            FavouriteLabel = recipe.Label,
+            FavouriteCalories = recipe.Calories,
+            FavouriteTotalTime = recipe.TotalTime
+        };
+        await httpClient.PostAsJsonAsync("api/favourites", favourite);
+        Toaster.Success($"{recipe.Label} added to favs");
+    }
+
+    private async Task GetFavorite()
+    {
+        var recipes = await httpClient.GetStringAsync("api/favourites/GetFavoriteSummary");
+    }
 
 }

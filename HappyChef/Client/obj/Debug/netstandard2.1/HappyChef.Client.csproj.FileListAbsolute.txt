@@ -788,7 +788,6 @@ C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstand
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\5lY1KL-pA7kS-OYycrkrhkXJKFHJHVbdmUTyPYaqDiM=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\fXppSpNZWwDJhYYWU_uQSwXoC5Krwc_3mqRwKJz0FHY=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\_kkwUt5LUrFrnFcHiSvLP3Ps50UAimB6C5utgehqOo4=.hash
-C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\I2RJGO0iaIMoqZytEGtsZrWGHZEkTU7XUGSjt-edw4g=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\OXmOCG-XoCqee_Bt1xRkO6hJIKiAIqHtW1uuJ8wRSf8=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\FJ_rEgcx6ljTxwbRXZSUGfrDKpVvOxHCSfNxbnXNn3M=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\n0Ag7rF7ZQamklPSZkakIXkRoa6JwlmPSS0cRaAhJQM=.hash
@@ -799,7 +798,6 @@ C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstand
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\r8LuqDQgcB-c3E48xHqsAY1eRZB1ZtuqZF6nlufn7kg=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\DrtNiKIMjfSOdamH5Bs5zHmjFADgNiwrY5tRgTm6XuI=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\czNf3btAeBW-vvID5LAfgcsNZ_GM3ssVuPaMflcg0rs=.hash
-C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\Ny_qMVgCB4k6sS6ypU9q4aCQ9Uf0RraJs2AMVPNe_1I=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\3S0qzYaBEKOBXarzVLNzNAFXlwJr6nI3lFlYUpQTPH8=.hash
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\UC-3Rm1NkdNdlIrzYARo_dO-HDlS5mhPxo0IQv7kma8=.hash
@@ -960,6 +958,12 @@ C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstand
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\HappyChef.Client.csproj.CopyComplete
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\HappyChef.Client.dll
 C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\HappyChef.Client.pdb
-C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\O1ZZzpjHY8dVjjmfQQzz-vpEx8DMnuCr7DIp6KqDSC0=.hash
-C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\jyl31-hjuHMkjr3qwRl_emFeMRzmugxe4-gtoO9vQcI=.hash
-C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\6aMh_yKFrCDC0jEUez4-zCjtNHQjdNx5DPcKy9TkLBA=.hash
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\RazorDeclaration\Components\CreateReviewComponent.razor.g.cs
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\Components\CreateReviewComponent.razor.g.cs
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\RazorDeclaration\Components\ReviewDisplayComponent.razor.g.cs
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\Razor\Components\ReviewDisplayComponent.razor.g.cs
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\h-aNKXMtbcC5Mx3mIitSn-Oe7SHrKh0XLlB8g8r-jek=.hash
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\xnu8nmssNr7qIlGn2By3ZeTL4EseC9fgu4bRfd8RuZs=.hash
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\JwaMYlJw9i9R95AIkL25gQSd4NfH19hz4hl3tkKZKOg=.hash
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\nyR6mCegt2XXLaWtRHNk8CBxAoec9yYDA33qx_SiKVM=.hash
+C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\obj\Debug\netstandard2.1\integrity\pG9lA9CAWy7rQqm2exRXSfvPsKgnA10Oy7V-DOIQDlE=.hash

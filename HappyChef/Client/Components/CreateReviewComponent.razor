@@ -1,0 +1,96 @@
+﻿@using HappyChef.Client.Models
+@inject HttpClient httpClient
+@inject Sotsera.Blazor.Toaster.IToaster Toaster
+
+<div class="mt-4">
+    <h5>Review Recipe</h5>
+</div>
+<hr />
+<div class="row">
+    <div class="col-7">
+        How good is the recipe?
+    </div>
+</div>
+
+<div style="font-size: xxx-large">
+    <span class="oi oi-star @starcolor[0]" aria-hidden="true" @onclick="@(() => selectstar(1))"></span>
+    <span class="oi oi-star @starcolor[1]" aria-hidden="true" @onclick="@(() => selectstar(2))"></span>
+    <span class="oi oi-star @starcolor[2]" aria-hidden="true" @onclick="@(() => selectstar(3))"></span>
+    <span class="oi oi-star @starcolor[3]" aria-hidden="true" @onclick="@(() => selectstar(4))"></span>
+    <span class="oi oi-star @starcolor[4]" aria-hidden="true" @onclick="@(() => selectstar(5))"></span>
+</div>
+<hr />
+<EditForm Model="@reviewModel" OnValidSubmit="@SubmitReview">
+
+    <div class="row">
+        <div class="col-7">
+            Add a written review
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-7">
+            <InputTextArea rows="10" cols="40" @bind-Value="@reviewModel.ReviewText" />
+        </div>
+    </div>
+
+    <div>
+        <button class="btn btn-sm btn-primary" type="submit"> Submit Review</button>
+        <button class="btn btn-sm btn-warning" @onclick="OnBack"> Cancel</button>
+    </div>
+</EditForm>
+
+
+@code {
+    [Parameter]
+    public Recipe Recipe { get; set; }
+
+    [Parameter]
+    public EventCallback OnBack { get; set; }
+
+    ReviewModel reviewModel = new ReviewModel();
+    string[] starcolor = new string[5];
+
+    protected override Task OnInitializedAsync()
+    {
+        unselectall();
+        this.StateHasChanged();
+        return Task.CompletedTask;
+    }
+
+    private void unselectall()
+    {
+        for (int i = 0; i < starcolor.Length; i++)
+        {
+            starcolor[i] = "unselectedstar";
+        }
+
+    }
+
+    async Task selectstar(int index)
+    {
+        reviewModel.Stars = index;
+        unselectall();
+        for (int i = 0; i < index; i++)
+        {
+            starcolor[i] = "selectedstar";
+        }
+        this.StateHasChanged();
+
+    }
+
+    private async Task SubmitReview()
+    {
+        reviewModel.RecipeUri = Recipe.Uri;
+        reviewModel.DateStamp = DateTime.Now;
+        await httpClient.PostAsJsonAsync("api/reviews", reviewModel);
+        Toaster.Success($"Submitted review");
+        await OnBack.InvokeAsync(null);
+
+    }
+
+
+}
+
+
+

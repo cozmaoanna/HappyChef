@@ -125,7 +125,7 @@ using HappyChef.Client.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 58 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Components\RecipeDetailsComponent.razor"
+#line 78 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Components\RecipeDetailsComponent.razor"
        
 
     [Parameter]
@@ -136,7 +136,9 @@ using HappyChef.Client.Models;
         Picture,
         Ingredients,
         Labels,
-        Diet
+        Diet,
+        Reviews,
+        CreateReview
     }
 
     private DisplayState displayState = DisplayState.Picture;
@@ -148,12 +150,31 @@ using HappyChef.Client.Models;
         return Task.CompletedTask;
     }
 
+    private async Task CreateFavourite(Recipe recipe)
+    {
 
+        FavouritesModel favourite = new FavouritesModel()
+        {
+            RecipeUri = recipe.Uri,
+            FavouriteLabel = recipe.Label,
+            FavouriteCalories = recipe.Calories,
+            FavouriteTotalTime = recipe.TotalTime
+        };
+        await httpClient.PostAsJsonAsync("api/favourites", favourite);
+        Toaster.Success($"{recipe.Label} added to favs");
+    }
+
+    private async Task GetFavorite()
+    {
+        var recipes = await httpClient.GetStringAsync("api/favourites/GetFavoriteSummary");
+    }
 
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Sotsera.Blazor.Toaster.IToaster Toaster { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient httpClient { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -184,3 +184,11 @@ app {
         display: block;
     }
 }
+
+.unselectedstar{
+    color: lightgray
+}
+
+.selectedstar {
+    color: gold
+}

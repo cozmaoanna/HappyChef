@@ -147,7 +147,7 @@ using HappyChef.Client.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 76 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
+#line 41 "C:\Users\Cornel\Documents\Projects\HappyChef\HappyChef\Client\Pages\RecipeSearch.razor"
        
     [CascadingParameter]
     private Task<AuthenticationState> authenticationStateTask { get; set; }
@@ -183,24 +183,7 @@ using HappyChef.Client.Models;
 
 
 
-    private async Task CreateFavourite(Recipe recipe)
-    {
-
-        FavouritesModel favourite = new FavouritesModel()
-        {
-            RecipeUri = recipe.Uri,
-            FavouriteLabel = recipe.Label,
-            FavouriteCalories = recipe.Calories,
-            FavouriteTotalTime = recipe.TotalTime
-        };
-        await httpClient.PostAsJsonAsync("api/favourites", favourite);
-        Toaster.Success($"{recipe.Label} added to favs");
-    }
-
-    private async Task GetFavorite()
-    {
-        var recipes = await httpClient.GetStringAsync("api/favourites/GetFavoriteSummary");
-    }
+   
 
 
 #line default

@@ -1,0 +1,105 @@
+﻿@using HappyChef.Client.Models
+@inject HttpClient httpClient
+@inject Sotsera.Blazor.Toaster.IToaster Toaster
+@using Newtonsoft.Json.Serialization
+@using Newtonsoft.Json
+
+<div class="mt-4">
+    <div class="row">
+        <div class="col-3">
+            <h5>Reviews</h5>
+        </div>
+        @if (reviews != null && reviews.Length > 0)
+        {
+            <div class="col-9 text-right">
+                <span>
+                    @averageRating
+                </span>
+                <span>
+                    / 5
+                </span>
+                @for (int i = 0; i < 5; i++)
+                {
+                    if (averageRating <= i)
+                    {
+                        <span class="oi oi-star unselectedstar" aria-hidden="true"></span>
+                    }
+                    else
+                    {
+                        <span class="oi oi-star selectedstar" aria-hidden="true"></span>
+                    }
+                }
+
+            </div>
+        }
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-12 text-right">
+            <button class="btn btn-sm btn-primary" @onclick="@OnCreateReview"> Create Review</button>
+        </div>
+    </div>
+    <hr />
+</div>
+
+@if (reviews != null && reviews.Length > 0)
+{
+    foreach (var item in reviews)
+    {
+        <div class="row mx-3">
+            <div class="Col">
+                @for (int i = 0; i < 5; i++)
+                {
+                    if (item.Stars <= i)
+                    {
+                        <span class="oi oi-star unselectedstar" aria-hidden="true"></span>
+                    }
+                    else
+                    {
+                        <span class="oi oi-star selectedstar" aria-hidden="true"></span>
+                    }
+                }
+            </div>
+        </div>
+        <div class="row mx-3">
+            <div class="Col mh-100">
+                @item.ReviewText
+            </div>
+        </div>
+        <hr />
+    }
+}
+
+<hr />
+
+@code {
+    [Parameter]
+    public Recipe Recipe { get; set; }
+
+    [Parameter]
+    public EventCallback OnCreateReview { get; set; }
+
+    ReviewModel[] reviews = null;
+
+    float averageRating = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadReviews();
+    }
+
+    async Task LoadReviews()
+    {
+        var reviewUrl = new ReviewUrl()
+        {
+            RecipeUri = Recipe.Uri
+        };
+
+        var result = await httpClient.PostAsJsonAsync<ReviewUrl>("api/reviews/GetRecipeReviews", reviewUrl);
+        reviews = JsonConvert.DeserializeObject<ReviewModel[]>(await result.Content.ReadAsStringAsync());
+        if (reviews.Length > 0)
+            averageRating = reviews.Sum(x => x.Stars) / reviews.Length;
+        this.StateHasChanged();
+    }
+
+}

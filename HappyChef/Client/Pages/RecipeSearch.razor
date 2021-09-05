@@ -29,44 +29,9 @@
 
     <div class="row">
         @foreach (var item in searchresult.Hits)
-        {
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-header">@item.Recipe.Label</div>
-                    <div class="card-footer">Calories : @item.Recipe.Calories</div>
-                    <div class="card-footer">
-                        <HappyChef.Client.Components.RecipeDetailsComponent Recipe="@item.Recipe"></HappyChef.Client.Components.RecipeDetailsComponent>
-                    </div>
-                    @*<div class="card-footer">diet Label : @item.Recipe.DietLabels</div>
-
-
-
-                        <div class="card-footer"><img src="@item.Recipe.Image" style='height: 100%; width: 100%; object-fit: contain'></div>
-
-
-                        @*<EditForm Model="@favourite" OnValidSubmit="@CreateFavourite">
-                                <InputText @bind-Value="favourite.FavouriteLabel" />
-
-                                <button type="submit">Add to favourites</button>
-                            </EditForm>*@
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-success" @onclick="@( () => CreateFavourite(item.Recipe))">Add to favourites</button>
-                        <button type="submit" class="btn btn-success" @onclick="@( () => GetFavorite())">Get Site favorites</button>
-
-                    </div>
-                    <br />
-
-
-
-
-                </div>
-                <br />
-
-            </div>
-            <br />
-
+        { 
+            <HappyChef.Client.Components.RecipeDetailsComponent Recipe="@item.Recipe"></HappyChef.Client.Components.RecipeDetailsComponent>
         }
-
     </div>
 
 
@@ -108,23 +73,6 @@
 
 
 
-    private async Task CreateFavourite(Recipe recipe)
-    {
-
-        FavouritesModel favourite = new FavouritesModel()
-        {
-            RecipeUri = recipe.Uri,
-            FavouriteLabel = recipe.Label,
-            FavouriteCalories = recipe.Calories,
-            FavouriteTotalTime = recipe.TotalTime
-        };
-        await httpClient.PostAsJsonAsync("api/favourites", favourite);
-        Toaster.Success($"{recipe.Label} added to favs");
-    }
-
-    private async Task GetFavorite()
-    {
-        var recipes = await httpClient.GetStringAsync("api/favourites/GetFavoriteSummary");
-    }
+   
 
 }

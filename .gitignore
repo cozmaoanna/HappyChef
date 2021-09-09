@@ -1,2 +1,15 @@
-bin/
+HappyCheffServices/obj/
+HappyCheffWeb/.vs/
+HappyCheffWeb/Web/bin/
+HappyCheffWeb/obj/
+HappyCheffWeb/packages/
+packages/
+EFGenerate/obj/
+.vs/
+HappyCheffServices/bin/
 obj/
+bin/
+HappyCheff/Client/obj
+HappyCheff/Client/bin
+HappyCheff/Shared/bin
+HappyCheff/Shared/obj

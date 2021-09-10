@@ -9,9 +9,9 @@ EFGenerate/obj/
 HappyChefServices/bin/
 obj/
 bin/
-HappyChef/Client/obj
-HappyChef/Client/bin
-HappyChef/Shared/bin
-HappyChef/Shared/obj
-HappyChef/SeleniumTests/obj
-HappyChef/SeleniumTests/bin
+HappyChef/Client/obj/
+HappyChef/Client/bin/
+HappyChef/Shared/bin/
+HappyChef/Shared/obj/
+HappyChef/SeleniumTests/obj/
+HappyChef/SeleniumTests/bin/

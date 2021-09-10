@@ -13,3 +13,5 @@ HappyChef/Client/obj
 HappyChef/Client/bin
 HappyChef/Shared/bin
 HappyChef/Shared/obj
+HappyChef/SeleniumTests/obj
+HappyChef/SeleniumTests/bin

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
@@ -26,110 +26,24 @@ namespace HappyChef.Client.SeleniumTests
     [TestFixture]
     public class BaseClass
     {
-
-        public string HappyChefTestBaseURL { get; set; }
-
-        public string HappyChefTestDBConnection { get; set; }
-
-
-        public string HappyChefTestUsername { get; set; }
-
-        public string HappyChefTestPassword { get; set; }
-
-        public string HappyChefTestHeadless { get; set; }
-
-       
-
-
-
-
-        [SetUp]
-        public void Setup()
-        {
-            HappyChefTestBaseURL = LoadEnvironmentVariable("HappyChefTestBaseURL");
-            HappyChefTestDBConnection = LoadEnvironmentVariable("HappyChefTestDBConnection");
-            HappyChefTestUsername = LoadEnvironmentVariable("HappyChefTestUsername");
-            HappyChefTestPassword = LoadEnvironmentVariable("HappyChefTestPassword");
-            HappyChefTestHeadless = LoadEnvironmentVariable("HappyChefTestHeadless");
-        
-        }
-
-        public string LoadEnvironmentVariable(string environmentVariable)
-        {
-            if (Environment.GetEnvironmentVariable(environmentVariable) == null)
-            {
-                throw (new Exception("Need environment variable :" + environmentVariable));
-            }
-            else
-            {
-                return Environment.GetEnvironmentVariable(environmentVariable);
-            }
-
-
-        }
-
-        public static RemoteWebDriver driver;
-        private StringBuilder verificationErrors = new StringBuilder();
-        protected string baseURL;
-
-        public static string emailURL;
-        public static string addUserName = "SeleniumTest@testorg.com";
-
-        public WebDriverWait wait;
-        public WebDriverWait waitSync;
-
-
-        public WebDriverWait waitForToastMessage;
-        public WebDriverWait longWait;
-
-
-        public static string AddNewUserName;
-
-        public static string newUserPassword;
-
-
-        public static char[] toTrim = { '\\', '\"' };
-
-
-
-
-
-        public static string NewClientPassword
-        {
-            get => newUserPassword;
-            set => newUserPassword = value;
-        }
-        public static string NewEmailURL
-        {
-
-            get => $"{emailURL}".TrimEnd(toTrim);
-
-            set => emailURL = value;
-        }
+        public static string UserName;
+        public static string Password;
+        public static string URL;
 
 
         public BaseClass()
         {
-            AddNewUserName = $"{addUserName}@testorg.com";
+            UserName = $"firstuser@testorg.com";
+            Password = "D12c8x3@";
+            URL = $"https://localhost:44316/";
         }
 
-
-
-
+      
         [SetUp]
         public virtual void SetupTest()
         {
-            //ConfigHelper.FirefoxDriverOptions = new FirefoxOptions();
-            //    ConfigHelper.FirefoxDriverOptions.BrowserExecutableLocation = @"C:\\prj\\Tools\\geckodriver - v0.23.0 - win64";
 
-            //    ConfigHelper.WebDriverGlobal = new FirefoxDriver();
-            //    //(ConfigHelper.FirefoxDriverOptions);
-
-
-            //ReadOnlyCollection<IWebElement> element = wait.Until(
-            //    //    ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Take '])[3]/following::span[1]")));
-
-            switch (HappyChefTestBaseURL)
+            switch (URL)
             {
                 case "Chrome":
                     driver = new ChromeDriver();
@@ -142,16 +56,13 @@ namespace HappyChef.Client.SeleniumTests
                     break;
                 default:
                     var chromeOptions = new ChromeOptions();
-                    if (HappyChefTestHeadless.ToLower() == "true")
-                    {
-                        chromeOptions.AddArguments("headless");
-                    }
+                    
                     chromeOptions.AddArguments("window-size=1920,1080");
                     chromeOptions.AddArguments("start-maximized");
                     chromeOptions.AddArguments("disable-gpu");
                     chromeOptions.AddArguments("no-sandbox");
                     chromeOptions.AddArguments("ignore-certificate-errors"); //*/
-                    driver = new ChromeDriver(chromeOptions);//*/
+                     driver = new ChromeDriver(chromeOptions);//*/
                     //driver = new ChromeDriver();
                     break;
             }
@@ -159,14 +70,12 @@ namespace HappyChef.Client.SeleniumTests
 
             driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(5);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-            //driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
+//driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
 
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(100));
             waitSync = new WebDriverWait(driver, TimeSpan.FromSeconds(500));
             waitForToastMessage = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             longWait = new WebDriverWait(driver, TimeSpan.FromSeconds(250));
-
-
 
             //  driver.Navigate().GoToUrl(baseURL);
 
@@ -174,13 +83,24 @@ namespace HappyChef.Client.SeleniumTests
         }
 
         public virtual void Init()
-        {
-            //throw new NotImplementedException();
-        }
-        public virtual void Login(string userName, string password)
-        {
-            throw new NotImplementedException();
-        }
+{
+    //throw new NotImplementedException();
+}
+        public static RemoteWebDriver driver;
+        private StringBuilder verificationErrors = new StringBuilder();
+        protected string baseURL;
+        
+        public WebDriverWait wait;
+        public WebDriverWait waitSync;
+
+         public WebDriverWait waitForToastMessage;
+        public WebDriverWait longWait;
+
+
+
+
+
+
 
         [TearDown]
         public void TeardownTest()
@@ -200,40 +120,8 @@ namespace HappyChef.Client.SeleniumTests
             }
             Assert.AreEqual("", verificationErrors.ToString());
         }
-
-       
-
-
-        public void LoginClientMethod()
-        {
-            driver.Navigate().GoToUrl(HappyChefTestBaseURL);
-            wait.Until(x => x.FindElements(By.TagName("button")).FirstOrDefault(y => y.Text == "Sign In"));
-            var username = driver.FindElementById("userName");
-            username.SendKeys(HappyChefTestUsername);
-            var password = driver.FindElementById("password");
-            password.SendKeys(HappyChefTestPassword);
-            var loginbutton = driver.FindElementByClassName("btn");
-            loginbutton.Click();
-
-            wait.Until(x => x.FindElements(By.TagName("h4"))).FirstOrDefault(y => y.Text == HappyChefTestUsername);
-        }
-
-        public void LoginAdminMethod()
-        {
-            driver.Navigate().GoToUrl(HappyChefTestBaseURL);
-            wait.Until(x => x.FindElements(By.TagName("button")).FirstOrDefault(y => y.Text == "Sign In"));
-            var username = driver.FindElementById("userName");
-            username.SendKeys("admin@testorg.com");
-
-
-            var password = driver.FindElementById("password");
-            password.SendKeys("test123!");
-            var loginbutton = driver.FindElementByClassName("btn");
-            loginbutton.Click();
-
-        }
-
-        public void LogoutMethod()
+        
+        public void Logout()
         {
             wait.Until(x => x.FindElements(By.Id("logoutTop")));
             var logoff = driver.FindElementById("logoutTop");
@@ -243,131 +131,48 @@ namespace HappyChef.Client.SeleniumTests
             logOut.Click();
         }
 
-        
+
         public void Search()
         {
-            wait.Until(x => x.FindElements(By.ClassName("btn")).FirstOrDefault(y => y.Text == "Recipe"));
-            var search = driver.FindElementsByClassName("btn").FirstOrDefault(x => x.Text == "Search");
-            search.Click();
+            wait.Until(x => x.FindElements(By.CssSelector("recipesearch")).FirstOrDefault(y => y.Text == "Recipe"));
+            driver.FindElementByCssSelector("a[href=recipesearch]");
+                        
+            var search = driver.FindElementsByClassName("round").FirstOrDefault(x => x.Text == "Recipe Name");
+            search.SendKeys("Chocolate Chicken");
+
+            wait.Until(x => x.FindElements(By.TagName("h4")).FirstOrDefault(y => y.Text == "Chocolate Chicken"));
+
         }
-      
-        public void Recipe()
+
+        public void AddToFavs()
         {
-            var recipeChicken = driver.FindElement(By.ClassName("fa-trash-alt"));
-
-            // var deleteSnapshot = driver.FindElements(By.TagName("span")).FirstOrDefault(x => x.Text == "Delete Snapshot");
-            recipeChicken.Click();
-
-            wait.Until(x => x.FindElements(By.ClassName("card-body")).FirstOrDefault(x => x.Text.Contains("Chicken")));
-            wait.Until(x => x.FindElements(By.ClassName("btn")).FirstOrDefault(x => x.Text.Contains("Confirm")));
-
-            ConfirmButton();
+            var addToFavorites = driver.FindElementsByClassName("btn").FirstOrDefault(x => x.Text == "Add to Favorites");
+            addToFavorites.Click();
+            ToastMessageConfirm("added to favs");
         }
-
-        public void ConfirmButton()
-        {
-            wait.Until(x => x.FindElements(By.ClassName("btn")).FirstOrDefault(y => y.Text == "Confirm"));
-            var confirmButton = driver.FindElementsByClassName("btn").FirstOrDefault(x => x.Text == "Confirm");
-            confirmButton.Click();
-        }
-
-        public void CloseXButton()
-        {
-            var closeX = driver.FindElementByClassName("close");
-            closeX.Click();
-        }
-        public void SaveButton()
-        {
-            var saveButton = driver.FindElementsByClassName("btn").FirstOrDefault(x => x.Text == "Save");
-            saveButton.Click();
-        }
-
-
-      
-
-
-        protected IWebElement GetNewClientNameRow(string newClientName)
-        {
-            return driver.FindElementsByTagName("tr").FirstOrDefault(x => x.Text.ToLower().Contains(newClientName.ToLower()));
-        }
+        
 
         public void ToastMessageConfirm(string msg)
         {
             wait.Until(x => x.FindElements(By.Id("toast-container")).FirstOrDefault(y => y.Text.ToLower().Contains(msg.ToLower())));
-            // var success = driver.FindElements(By.ClassName("toast-message")).FirstOrDefault(y => y.Text.ToLower().Contains(msg.ToLower()));
-            //  Assert.IsNotNull(success);
+            
         }
-
-
-     
-
-
-
-        public void deleteMailNewUser()
-        {
-
-
-            SqlConnection deleteNewUser = new SqlConnection(HappyChefTestDBConnection.ToString());
-
-
-            try
-            {
-                string strSQL = @"delete Mail where Recipient like '%testUseraksdj%'";
-
-
-                SqlDataAdapter adaptor = new SqlDataAdapter(strSQL, deleteNewUser);
-
-
-                DataSet dataset = new DataSet();
-
-                adaptor.Fill(dataset);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-
-            }
-
-
-
-        }
-        public void deleteUser()
-        {
-
-
-            SqlConnection deleteNewUser = new SqlConnection(HappyChefTestDBConnection.ToString());
-
-
-          
-
-
-
-
-            try
-            {
-                string strSQL = @"delete from Email where UserName like '%SeleniumTest%'";
-
-
-                SqlDataAdapter adaptor = new SqlDataAdapter(strSQL, deleteNewUser);
-
-
-                DataSet dataset = new DataSet();
-
-                adaptor.Fill(dataset);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-
-            }
-
-
-
-        }
-
-       
-
 
 
     }
+
+
+
+
+        
+        
+
+
+        
+
+
+
+
+
+    
 }
